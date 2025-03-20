@@ -1745,12 +1745,14 @@
 <!-- ==================== Footer End Here ==================== -->
   
 <script>
+    // Updated gold rates per gram
     const goldRates = {
+        18: 6700, // Added 18K rate per gram
         22: 8120, // Updated rate per gram for 22K
         24: 8858  // Updated rate per gram for 24K
-        
     };
 
+    // Function to calculate gold value based on weight and purity
     function calculateGoldValue() {
         let amount = document.getElementById("goldAmount").value;
         let purity = document.getElementById("goldPurity").value;
@@ -1760,26 +1762,23 @@
 
     document.getElementById("goldAmount").addEventListener("input", calculateGoldValue);
     document.getElementById("goldPurity").addEventListener("change", calculateGoldValue);
-
     window.onload = calculateGoldValue;
 
-
-
-
-
+    // Updated historical gold rates (including 18K)
     const goldRate = [
-        { date: "12 Mar, 2025", 22: 7890, 24: 8614 },
-        { date: "11 Mar, 2025", 22: 7879, 24: 8602 },
-        { date: "10 Mar, 2025", 22: 7871, 24: 8593 },
-        { date: "07 Mar, 2025", 22: 7883, 24: 8605 },
-        { date: "06 Mar, 2025", 22: 7866, 24: 8587 },
-        { date: "05 Mar, 2025", 22: 7905, 24: 8630 },
-        { date: "04 Mar, 2025", 22: 7917, 24: 8643 },
-        { date: "03 Mar, 2025", 22: 7815, 24: 8532 },
-        { date: "28 Feb, 2025", 22: 7791, 24: 8505 },
-        { date: "27 Feb, 2025", 22: 7840, 24: 8559 }
+        { date: "12 Mar, 2025", 18: 6700, 22: 7890, 24: 8614 },
+        { date: "11 Mar, 2025", 18: 6685, 22: 7879, 24: 8602 },
+        { date: "10 Mar, 2025", 18: 6670, 22: 7871, 24: 8593 },
+        { date: "07 Mar, 2025", 18: 6688, 22: 7883, 24: 8605 },
+        { date: "06 Mar, 2025", 18: 6665, 22: 7866, 24: 8587 },
+        { date: "05 Mar, 2025", 18: 6713, 22: 7905, 24: 8630 },
+        { date: "04 Mar, 2025", 18: 6728, 22: 7917, 24: 8643 },
+        { date: "03 Mar, 2025", 18: 6640, 22: 7815, 24: 8532 },
+        { date: "28 Feb, 2025", 18: 6615, 22: 7791, 24: 8505 },
+        { date: "27 Feb, 2025", 18: 6650, 22: 7840, 24: 8559 }
     ];
 
+    // Function to update table with historical rates
     function updateTable() {
         const weight = document.getElementById("goldWeight").value;
         const tbody = document.getElementById("goldTable");
@@ -1788,15 +1787,15 @@
             tbody.innerHTML += `
                 <tr>
                     <td>${rate.date}</td>
+                    <td>₹${(rate[18] * weight).toLocaleString()}</td>
                     <td>₹${(rate[22] * weight).toLocaleString()}</td>
                     <td>₹${(rate[24] * weight).toLocaleString()}</td>
                 </tr>`;
         });
     }
-    document.getElementById("goldWeight").addEventListener("change", updateTable);
+
+    document.getElementById("goldWeight").addEventListener("input", updateTable);
     updateTable();
-
-
 </script>
     
     <!-- Jquery js -->
