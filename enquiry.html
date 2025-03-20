@@ -251,7 +251,7 @@
                 </div>
             </div> -->
             <div class="col-xl-12 col-lg-12">
-                <form  action="thankyou.html" method="POST"  class="pe-xl-5" style="box-shadow: 0 7px 20px rgba(0, 0, 0, 0.16); padding: 40px;">
+                <form  action="" method="POST"  class="pe-xl-5" style="box-shadow: 0 7px 20px rgba(0, 0, 0, 0.16); padding: 40px;">
                     <div class="row gy-3">
                         <h5>Personal Details</h5>
                         <div class="col-sm-6 col-xs-6">
@@ -326,7 +326,7 @@
                         </div>
                         
                         <div class="col-sm-12 mt-32">
-                            <button type="submit" class="btn btn-main py-18 px-32 rounded-8">Submit</button>
+                            <button type="submit" onclick="redirectToPage()"  class="btn btn-main py-18 px-32 rounded-8">Submit</button>
                         </div>
                         
 
@@ -340,7 +340,11 @@
 <!-- ================================= Checkout Page End ===================================== -->
 
 
-
+<script>
+    function redirectToPage() {
+        window.location.href = "https://apt2010.github.io/chinfin/thankyou.html";
+    }
+    </script>
 
 
 
