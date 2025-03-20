@@ -485,6 +485,7 @@
     .common-input {
         padding: 12px 24px;
     }
+    
 }
 
 @media screen and (max-width: 767px) {
@@ -1137,6 +1138,7 @@ input[type=number] {
     .common-card .card-header, .common-card .card-footer {
         padding: 12px 16px;
     }
+   
 }
 
 .common-card .card-header {
@@ -1262,6 +1264,11 @@ input[type=number] {
     .select2-dropdown {
         min-width: 170px;
     }
+    .icon-box{
+        display: inline-block !important;
+        height: auto !important;
+    }
+    
 }
 
 @media screen and (max-width: 424px) {
@@ -1300,6 +1307,7 @@ input[type=number] {
         padding: 4px 10px !important;
         font-size: 12px !important;
     }
+    
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
@@ -1372,6 +1380,7 @@ input[type=number] {
     .select2-container--open .select2-dropdown {
         left: -74px;
     }
+    
 }
 
 @media screen and (max-width: 424px) {
@@ -2871,6 +2880,10 @@ input:focus-visible {
     .mt-120 {
         margin-block-start: 120px !important;
     }
+    .icon-box{
+        display: inline-block !important;
+        height: auto !important;
+    }
 }
 
 .mb-120 {
@@ -4215,11 +4228,17 @@ input:focus-visible {
 .container-lg {
     max-width: 1680px;
 }
+@media screen and (min-width: 425px) and (max-width: 1024px) {
 
+    .enquy{ display: none;}
+}
 /* Column Extra Small Screen */
 @media screen and (min-width: 425px) and (max-width: 575px) {
     .col-xs-6 {
         width: 50%;
+    }
+    .tpt{
+        display: none !important;
     }
 }
 
@@ -8094,7 +8113,7 @@ input:focus-visible {
     }
 }
 .menu-category-wrapper{
-    gap: clamp(16.75rem, -3.243rem + 15vw, 7.5rem) !important;
+    /* gap: clamp(16.75rem, -3.243rem + 15vw, 7.5rem) !important; */
 }
 
 @media screen and (max-width: 1199px) {
@@ -8172,6 +8191,10 @@ input:focus-visible {
     .logo img {
         max-width: 148px;
     }
+    .prttu {
+        width: 160px !important;
+        height: 160px !important;
+    }
 }
 /* Header Menu and Submenu Css Start */
 .nav-menu {
@@ -8182,6 +8205,10 @@ input:focus-visible {
 @media screen and (max-width: 1399px) {
     .nav-menu {
         gap: 24px;
+    }
+    .prttu {
+        width: 160px !important;
+        height: 160px !important;
     }
 }
 
