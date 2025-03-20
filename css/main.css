@@ -8003,6 +8003,7 @@ input:focus-visible {
     .header-top__right {
         width: 100%;
     }
+   
 
     .header-top__right li:last-child {
         margin-inline-start: auto;
@@ -8039,6 +8040,19 @@ input:focus-visible {
     .header-top__right.style-two > li a {
         color: #fff !important;
     }
+    .h4meer{
+        font-size: 25px !important;
+    }
+    .cret{
+        display: block !important;
+    }
+    .calculator-container{
+        margin-top: 50px !important;
+    }
+    .banner-item{
+        height: auto !important;
+    }
+   
 }
 
 .header-top__right.style-two > li a::before {
@@ -8061,6 +8075,7 @@ input:focus-visible {
     .border-right-item a {
         font-size: 12px !important;
     }
+    
 }
 
 .border-right-item {
@@ -8077,6 +8092,9 @@ input:focus-visible {
         margin-inline-end: 16px !important;
         padding-inline-end: 16px !important;
     }
+}
+.menu-category-wrapper{
+    gap: clamp(16.75rem, -3.243rem + 15vw, 7.5rem) !important;
 }
 
 @media screen and (max-width: 1199px) {
@@ -9042,7 +9060,7 @@ input:focus-visible {
     mask-image: url(../images/banner-bg2.png);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    background: #D3EBC0;
+    /* background: #D3EBC0; */
     mask-position: top;
     mask-size: 100% 100%;
     gap: clamp(1.5rem, -2.151rem + 7.607vw, 4.5rem);
