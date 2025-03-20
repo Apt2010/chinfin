@@ -259,24 +259,37 @@
                             <div class="row gy-4">
                                 <div class="col-sm-6 col-xs-6">
                                     <label for="name" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Full Name <span class="text-danger text-xl line-height-1">*</span> </label>
-                                    <input type="text" class="common-input px-16" id="name" placeholder="Full name">
+                                    <input type="text" class="common-input px-16" id="name" placeholder="Full name" required>
                                 </div>
                                 <div class="col-sm-6 col-xs-6">
                                     <label for="email" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Email Address <span class="text-danger text-xl line-height-1">*</span> </label>
-                                    <input type="email" class="common-input px-16" id="email" placeholder="Email address">
+                                    <input type="email" class="common-input px-16" id="email" placeholder="Email address" required> 
                                 </div>
                                 <div class="col-sm-6 col-xs-6">
-                                    <label for="phone" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Phone Number<span class="text-danger text-xl line-height-1">*</span> </label>
-                                    <input type="number" class="common-input px-16" id="phone" placeholder="Phone Number*">
+                                    <label for="phone" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Mobile Number<span class="text-danger text-xl line-height-1">*</span> </label>
+                                    <input type="number" class="common-input px-16" id="phone" placeholder="Mobile Number*" required>
                                 </div>
                                 <div class="col-sm-6 col-xs-6">
                                     <label for="subject" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Subject <span class="text-danger text-xl line-height-1">*</span> </label>
-                                    <input type="text" class="common-input px-16" id="subject" placeholder="Subject">
+                                    <input type="text" class="common-input px-16" id="subject" placeholder="Subject" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label for="message" class="flex-align gap-4 text-sm font-heading-two text-gray-900 fw-semibold mb-4">Message <span class="text-danger text-xl line-height-1">*</span> </label>
-                                    <textarea class="common-input px-16" id="message" placeholder="Type your message"></textarea>
+                                    <textarea class="common-input px-16" id="message" placeholder="Type your message"></textarea required>
                                 </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <!--you can put this line anywhere in the site-->
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      
+                                    <!--NOTE THE ACTION IS POINTING TO form-data.com-->
+                                    <form action="https://api.form-data.com/f/bqtxth46icif4r4ot1p5qn" method="post">
+                                    
+                                    
+                                    <div class="g-recaptcha mt-4"
+                                        data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                                  
+                                   <div class="help-block with-errors"></div>
+                              </div>
                                 <div class="col-sm-12 mt-32">
                                     <button type="submit" class="btn btn-main py-18 px-32 rounded-8">Submit</button>
                                 </div>
