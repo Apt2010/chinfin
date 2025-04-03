@@ -1,0 +1,1038 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Chinfin Gold </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/fav-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Pe-icon-7-stroke CSS -->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="assets/css/jqueryui.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+
+.gold-header{
+               background: url('https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+               padding: 60px 0px 20px;
+               position: relative;
+           }
+   
+           .gold-header:before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgb(238 238 238 / 70%);
+           }
+
+.gold-theme {
+            background-color: #FFD700;
+            color: #333;
+        }
+        .shop-card {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .shop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .shop-icon {
+            font-size: 24px;
+            color: #FFD700;
+        }
+        .direction-btn {
+            background:  linear-gradient(to right, #D4AF37, #FFD700);
+            border: none;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px;
+        }
+        .direction-btn:hover {
+            background:  linear-gradient(to right, #D4AF37, #FFD700);
+        }
+        .map-container {
+            height: 100%;
+            min-height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .search-container {
+            position: relative;
+        }
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .active-shop {
+            border-left: 4px solid #FFD700;
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        @media (max-width: 991.98px) {
+            .map-container {
+                margin-top: 20px;
+            }
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+
+
+
+               
+        /* FAQ Search Section */
+        .faq-search {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin-top: -50px;
+          position: relative;
+          z-index: 10;
+          border-top: 4px solid #D4AF37;
+      }
+
+      .search-box {
+          position: relative;
+      }
+
+      .search-box input {
+          padding-left: 50px;
+          border-radius: 50px;
+          border: 1px solid #ddd;
+          height: 50px;
+      }
+
+      .search-box i {
+          position: absolute;
+          left: 20px;
+          top: 15px;
+          color: #D4AF37;
+          font-size: 1.2rem;
+      }
+
+      /* FAQ Accordion */
+      .faq-accordion .accordion-item {
+          border: none;
+          border-radius: 5px !important;
+          margin-bottom: 15px;
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+          overflow: hidden;
+      }
+
+      .faq-accordion .accordion-button {
+          background: white;
+          color: #0A0A0A;
+          font-weight: 600;
+          padding: 20px 25px;
+          box-shadow: none !important;
+      }
+
+      .faq-accordion .accordion-button:not(.collapsed) {
+          background:
+              white;
+          color: #D4AF37;
+          font-size: 18px;
+      }
+
+      .faq-accordion .accordion-button:after {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .faq-accordion .accordion-body {
+          padding: 20px 25px;
+          background: rgba(212, 175, 55, 0.05);
+          font-size: 16px;
+      }
+
+      /* Feedback Section */
+      .feedback-section {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin: 50px 0;
+          border-top: 4px solid #D4AF37;
+      }
+
+      .feedback-form textarea {
+          min-height: 120px;
+          resize: vertical;
+      }
+
+      /* Question Form */
+      .question-form {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin-bottom: 50px;
+          border-top: 4px solid #D4AF37;
+      }
+
+      /* Gold Buttons */
+      .btn-gold {
+          background: linear-gradient(to right, #d4af37, #ffd700);
+          color: #f9f9f9;
+          border: none;
+          padding: 12px 30px;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+      }
+
+      .btn-gold:hover {
+          background: linear-gradient(to right, #d4af37, #ffd700);
+          color: #ffffff;
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+          .gold-header {
+              padding: 80px 0;
+          }
+
+          .faq-search {
+              margin-top: -30px;
+          }
+      }
+
+
+      .keywords {
+          font-size: 16px;
+      }
+
+      .btn-outline-success {
+          border: 1px solid green;
+          padding: 10px;
+      }
+
+      .btn-outline-danger {
+          border: 1px solid rgb(147, 8, 8);
+          padding: 10px;
+      }
+
+
+      .form-select,
+      .form-control {
+          float: none;
+          width: 100%;
+          background-image: none;
+          border-radius: 10px;
+          border: 1px solid #bababa;
+      }
+
+      .btn-outline-secondary {
+          padding: 15px;
+          margin-top: 30px;
+          background-color: #4f5053;
+          color: white;
+
+      }
+
+      .card-text {
+          font-size: 16px;
+          padding:
+              10px 0px;
+      }
+
+      .list-unstyled ul li {
+          font-size: 16px;
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 450px) {
+
+        .direction-btn{
+            display: inline-flex
+;
+}
+
+        }
+
+
+            /* Footer Belt Styles */
+            .footer-belt {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 0px 30px 0px;
+            z-index: 1000;
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .nav-belt {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .belt-btn {
+            flex: 1;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 25px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #313131;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    min-width: 120px;
+        }
+        
+        .belt-btn:hover {
+            background: rgb(255 254 242);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .belt-btn i {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .belt-btn span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .belt-divider {
+            width: 1px;
+            background: rgba(212, 175, 55, 0.5);
+            margin: 0 5px;
+        }
+
+
+   
+     </style>
+
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-7 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="position-static"><a href="about.html">About Us</a>
+                                            </li>
+                                            <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="goldloan.html">Gold Loan</a>
+                                                    </li>
+                                                    <li><a href="sellgold.html">Sell Gold</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="product.html">Buy 22K Gold Coin</a>
+                                            </li>
+                                            <li  class="active"><a href="location.html">Location</a>
+                                            </li>
+                                            <li><a href="contactus.html">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start 
+                        <div class="col-lg-2">
+                            <div
+                                class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="minicart-btn">
+                                                <i class="pe-7s-shopbag"></i>
+                                                <div class="notification">2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                        <div class="col-lg-3 text-right">
+                            <div class="header-top-settings">
+                                <ul class="nav align-items-center justify-content-end">
+                                    <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
+                                                style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
+                                                class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
+                                            ₹9000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <button class="mobile-menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+        <!-- mobile header end -->
+
+        <!-- offcanvas mobile menu start -->
+        <!-- off-canvas menu start -->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-overlay"></div>
+            <div class="off-canvas-inner-content">
+                <div class="btn-close-off-canvas">
+                    <i class="pe-7s-close"></i>
+                </div>
+
+                <div class="off-canvas-inner">
+
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children "><a href="#">Our Services</a>
+                                    <ul class="dropdown">
+                                        <li class="menu-item-has-children"><a href="goldloan.html">Gold Loan</a> </li>
+                                        <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children "><a href="product.html">22k Gold COin</a> </li>
+                                <li><a href="location.html">Location</a>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mobile menu navigation end -->
+                    </div>
+                    <!-- mobile menu end -->
+
+
+
+                </div>
+            </div>
+        </aside>
+        <!-- off-canvas menu end -->
+        <!-- offcanvas mobile menu end -->
+    </header>
+    <!-- end Header Area -->
+
+
+
+        <!-- FAQ Header -->
+        <header class="gold-header">
+          <div class="container position-relative">
+              <div class="col-12">
+                  <!-- section title start -->
+                  <div class="section-title text-center">
+                      <h2 class="title">Find Your Nearest Chinfin Shop</h2>
+                      <p class="lead text-muted">Explore our locations to buy gold coins or exchange old gold for cash. Visit us for the best deals and trusted service.</p>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+
+
+
+            <!-- Main Content -->
+            <div class="container py-4">
+              <div class="row">
+                  <!-- Left Side - Search and Shop List -->
+                  <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                      <!-- Search Bar -->
+                      <div class="search-container mb-4">
+                          <input type="text" class="form-control form-control-lg ps-4" id="shopSearch" placeholder="Search Chinfin gold shops in Tamil Nadu...">
+                          <i class="fas fa-search search-icon"></i>
+                      </div>
+  
+                      <!-- Shop List -->
+                      <div class="shop-list">
+                          <!-- Shop Card 1 - Chennai -->
+                          <div class="card shop-card active-shop" data-shop-id="1" onclick="showShopOnMap(1)">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-start">
+                                      <div class="me-3">
+                                          <i class="fas fa-gem shop-icon"></i>
+                                      </div>
+                                      <div class="flex-grow-1">
+                                          <h5 class="card-title mb-1">Chinmaya Finance Capital - Regd. Office</h5>
+                                          <p class="card-text text-muted mb-2 mt-2">
+                                              <i class="fas fa-map-marker-alt me-1"></i> Chinmaya Finance Capital Pvt Ltd,
+                                              D.No. 38C, AA Road, Gnanaolivupuram, Madurai, Tamilnadu - 625 016.
+                                          </p>
+                                          <p class="card-text mb-2">
+                                              <small>Open today: 10:00 AM - 8:30 PM</small>
+                                          </p>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                              <div>
+                                                  <i class="fas fa-phone me-1"></i> +91  93639 34949, +91 99944 07191
+                                              </div>
+                                              <button class="btn btn-sm direction-btn" onclick="event.stopPropagation(); getDirections(1)">
+                                                  <i class="fas fa-directions me-1"></i> Directions
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- Shop Card 2 - Coimbatore -->
+                          <div class="card shop-card" data-shop-id="2" onclick="showShopOnMap(2)">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-start">
+                                      <div class="me-3">
+                                          <i class="fas fa-gem shop-icon"></i>
+                                      </div>
+                                      <div class="flex-grow-1">
+                                          <h5 class="card-title mb-1">Chinmaya Finance Capital - Thirumangalam</h5>
+                                          <p class="card-text text-muted mb-2 mt-2">
+                                              <i class="fas fa-map-marker-alt me-1"></i> 335A , Mayon Nagar, Madurai Road, Thirumangalam. 625706.
+                                          </p>
+                                          <p class="card-text mb-2">
+                                              <small>Open today: 9:30 AM - 9:00 PM</small>
+                                          </p>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                              <div>
+                                                  <i class="fas fa-phone me-1"></i> +91 989 453 8768 , 04549 - 283200
+                                              </div>
+                                              <button class="btn btn-sm direction-btn" onclick="event.stopPropagation(); getDirections(2)">
+                                                  <i class="fas fa-directions me-1"></i> Directions
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- Shop Card 3 - Madurai -->
+                          <div class="card shop-card" data-shop-id="3" onclick="showShopOnMap(3)">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-start">
+                                      <div class="me-3">
+                                          <i class="fas fa-gem shop-icon"></i>
+                                      </div>
+                                      <div class="flex-grow-1">
+                                          <h5 class="card-title mb-1">Chinmaya Finance Capital - Sattur</h5>
+                                          <p class="card-text text-muted mb-2 mt-2">
+                                              <i class="fas fa-map-marker-alt me-1"></i> 349, Sreenivasa Complex, Vembakottai Road, Sattur. 626203
+                                          </p>
+                                          <p class="card-text mb-2">
+                                              <small>Open today: 9:45 AM - 8:45 PM</small>
+                                          </p>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                              <div>
+                                                  <i class="fas fa-phone me-1"></i> +91 934 404 6573 , 04562 - 264400
+
+                                              </div>
+                                              <button class="btn btn-sm direction-btn" onclick="event.stopPropagation(); getDirections(3)">
+                                                  <i class="fas fa-directions me-1"></i> Directions
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- Shop Card 4 - Virudhunagar -->
+                          <div class="card shop-card" data-shop-id="4" onclick="showShopOnMap(4)">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-start">
+                                      <div class="me-3">
+                                          <i class="fas fa-gem shop-icon"></i>
+                                      </div>
+                                      <div class="flex-grow-1">
+                                          <h5 class="card-title mb-1 ">Chinmaya Finance Capital  - Virudhunagar</h5>
+                                          <p class="card-text text-muted mb-2 mt-2">
+                                              <i class="fas fa-map-marker-alt me-1"></i> 104/5 D , Arulmigu Chokkanathar Temple Complex, 1st floor, SBI Bank Opposite, Virudhunagar. 626 001.
+                                          </p>
+                                          <p class="card-text mb-2">
+                                              <small>Open today: 10:00 AM - 8:30 PM</small>
+                                          </p>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                              <div>
+                                                  <i class="fas fa-phone me-1"></i> +91 638 221 1990 , 04562 - 265377, 
+                                              </div>
+                                              <button class="btn btn-sm direction-btn" onclick="event.stopPropagation(); getDirections(4)">
+                                                  <i class="fas fa-directions me-1"></i> Directions
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <!-- Shop Card 5 - Salem -->
+                          <div class="card shop-card" data-shop-id="5" onclick="showShopOnMap(5)">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-start">
+                                      <div class="me-3">
+                                          <i class="fas fa-gem shop-icon"></i>
+                                      </div>
+                                      <div class="flex-grow-1">
+                                          <h5 class="card-title mb-1">Chinmaya Finance Capital - Dindigul </h5>
+                                          <p class="card-text text-muted mb-2 mt-2">
+                                              <i class="fas fa-map-marker-alt me-1"></i>78 & 79 T.K.V.T. Complex, Mangles Road, Naagal Nagar, Dindigul. 624003
+                                          </p>
+                                          <p class="card-text mb-2">
+                                              <small>Open today: 9:30 AM - 8:00 PM</small>
+                                          </p>
+                                          <div class="d-flex justify-content-between align-items-center">
+                                              <div>
+                                                  <i class="fas fa-phone me-1"></i> +91 781 007 3740 , 0451 – 2423740 
+                                              </div>
+                                              <button class="btn btn-sm direction-btn" onclick="event.stopPropagation(); getDirections(5)">
+                                                  <i class="fas fa-directions me-1"></i> Directions
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Right Side - Google Map -->
+                  <div class="col-lg-7 col-md-12">
+                      <div class="map-container">
+                          <!-- Google Map iframe -->
+                          <div class="iframe-container">
+                              <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016734.737076022!2d76.04328445000001!3d10.790483299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0x559475cc463361f0!2sTamil%20Nadu!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                      </div>
+                      
+                      <!-- Selected Shop Info (visible on mobile) -->
+                  </div>
+              </div>
+          </div>
+
+
+              <!-- Gold Footer Belt -->
+    <div class="footer-belt">
+        <div class="nav-belt">
+            <a href="faq.html" class="belt-btn">
+                <i class="fas fa-question-circle"></i>
+                <span>FAQ Help</span>
+            </a>
+            
+            <div class="belt-divider"></div>
+            
+            <a href="location.html" class="belt-btn">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Our Stores</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!-- service policy area start -->
+    <div class="service-policy section-padding">
+        <div class="container">
+            <div class="row mtn-30">
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-safe"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>100% Authentic & Certified</h6>
+                            <p>Guaranteed purity and trust</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Great Investment</h6>
+                            <p>Secure your wealth with lasting value</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-gift"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Perfect Gift Choice</h6>
+                            <p>A timeless and meaningful present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-medal"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Compact & Valuable</h6>
+                            <p>Small in size, big in worth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service policy area end -->
+
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+    <footer class="footer-widget-area">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <div class="widget-title">
+                                <div class="widget-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>We are a team of designers and developers that create high quality wordpress,
+                                    shopify, Opencart </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Contact Us</h6>
+                            <div class="widget-body">
+                                <address class="contact-block">
+                                    <ul>
+                                        <li><i class="pe-7s-home"></i>
+                                            No.32, Pazhaninathan Complex, Reserve Line, Aathikulam Main Road, Madurai,
+                                            Tamil Nadu 625007</li>
+                                        <li><i class="pe-7s-mail"></i> <a
+                                                href="mailto:demo@plazathemes.com">support@chinfingold.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">0452 4230855</a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Information</h6>
+                            <div class="widget-body">
+                                <ul class="info-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="goldloan.html">Gold Loan</a></li>
+
+                                    <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                    <li><a href="sellgold.html">Sell Gold</a></li>
+
+                                    <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                    <li><a href="product.html">Buy 22k Gold Coin</a></li>
+
+
+                                    <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                                    <li><a href="contactus.html">contact Us</a></li>
+                                    <li><a href="location.html"> Locations</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Follow Us</h6>
+                            <div class="widget-body social-link">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-text text-center">
+                            <p>&copy; 2025 <b>Chinfingold</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- slick Slider JS -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="assets/js/countdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- jquery UI JS -->
+    <script src="assets/js/jqueryui.min.js"></script>
+    <!-- Image zoom JS -->
+    <script src="assets/js/image-zoom.min.js"></script>
+    <!-- Images loaded JS -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- mail-chimp active js -->
+    <script src="assets/js/ajaxchimp.js"></script>
+    <!-- contact form dynamic js -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="assets/js/google-map.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+
+
+    <script>
+      // Sample data for gold shops in Tamil Nadu
+      const shops = {
+          1: {
+              name: "CHINMAYA Finance Capital Pvt.Ltd",
+              address: " Chinmaya Finance Capital Pvt Ltd, D.No. 38C, AA Road, Gnanaolivupuram, Madurai, Tamilnadu - 625 016.",
+              embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.005145425761!2d78.09831502450778!3d9.933528774176079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf678d5865f1%3A0x78e6fc20f7347d2d!2sCHINMAYA%20Finance%20Capital%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1743665379771!5m2!1sen!2sin",
+              phone: "+91 93639 34949",
+              hours: "Open today: 10:00 AM - 8:30 PM"
+          },
+          2: {
+              name: "Chinmaya Finance Capital - Thirumangalam",
+              address: "335A , Mayon Nagar, Madurai Road, Thirumangalam. 625706.",
+              embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7862.581091536434!2d77.98241763822772!3d9.82594679772254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00d3220b141319%3A0xf2242db85825f989!2sThirumangalam!5e0!3m2!1sen!2sin!4v1743665609015!5m2!1sen!2sin",
+              phone: "+91 989 453 8768",
+              hours: "Open today: 9:30 AM - 9:00 PM"
+          },
+          3: {
+              name: "Chinmaya Finance Capital - Sattur",
+              address: "349, Sreenivasa Complex, Vembakottai Road, Sattur. 626203",
+              embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62986.98979748353!2d77.86547237641615!3d9.360953062978066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06caba10e01e73%3A0x2085481629bada!2sSSS%20Complex!5e0!3m2!1sen!2sin!4v1743665884219!5m2!1sen!2sin",
+              phone: "+91 934 404 6573 ",
+              hours: "Open today: 9:45 AM - 8:45 PM"
+          },
+          4: {
+              name: "Chinmaya Finance Capital - Virudhunagar",
+              address: "104/5 D , Arulmigu Chokkanathar Temple Complex, 1st floor, SBI Bank Opposite, Virudhunagar. 626 001.",
+              embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1006147.2656542084!2d77.18428631177393!3d9.912060567821129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b012c97ced2a295%3A0x717c318a2c45eab4!2sSBI!5e0!3m2!1sen!2sin!4v1743665848301!5m2!1sen!2sin",
+              phone: "+91 638 221 1990",
+              hours: "Open today: 10:00 AM - 8:30 PM"
+          },
+          5: {
+              name: "Chinmaya Finance Capital - Dindigul",
+              address: "78 & 79 T.K.V.T. Complex, Mangles Road, Naagal Nagar, Dindigul. 624003",
+              embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.7918313089904!2d77.9791962745124!3d10.358523166764043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00aa5096da4c7f%3A0xb53edbb9c527a36a!2sMengles%20Rd%2C%20Mendonsa%20Colony%2C%20Tamil%20Nadu%20624001!5e0!3m2!1sen!2sin!4v1743665788871!5m2!1sen!2sin",
+              phone: "+91  781 007 3740",
+              hours: "Open today: 9:30 AM - 8:00 PM"
+          }
+      };
+
+
+
+      // Show shop on map when clicked from list
+      function showShopOnMap(shopId) {
+          // Update active shop in list
+          document.querySelectorAll(".shop-card").forEach(card => {
+              card.classList.remove("active-shop");
+              if (card.getAttribute("data-shop-id") === shopId.toString()) {
+                  card.classList.add("active-shop");
+              }
+          });
+          
+          const shop = shops[shopId];
+          
+          // Update mobile info card
+          document.getElementById("mobileShopInfo").innerHTML = `
+              <h5 class="card-title">${shop.name}</h5>
+              <p class="card-text text-muted">
+                  <i class="fas fa-map-marker-alt me-1"></i> ${shop.address}
+              </p>
+              <p class="card-text">
+                  <small>${shop.hours}</small>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                      <i class="fas fa-phone me-1"></i> ${shop.phone}
+                  </div>
+                  <button class="btn btn-sm direction-btn" onclick="getDirections(${shopId})">
+                      <i class="fas fa-directions me-1"></i> Directions
+                  </button>
+              </div>
+          `;
+          
+          // Update iframe with the selected shop's embed URL
+          document.getElementById('mapIframe').src = shop.embedUrl;
+      }
+
+      // Get directions to selected shop
+      function getDirections(shopId) {
+          const shop = shops[shopId];
+          const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(shop.address)}&travelmode=driving`;
+          window.open(url, "_blank");
+      }
+
+      // Search functionality
+      document.getElementById("shopSearch").addEventListener("input", function(e) {
+          const searchTerm = e.target.value.toLowerCase();
+          
+          document.querySelectorAll(".shop-card").forEach(card => {
+              const shopId = card.getAttribute("data-shop-id");
+              const shop = shops[shopId];
+              const cardText = `${shop.name} ${shop.address}`.toLowerCase();
+              
+              if (cardText.includes(searchTerm)) {
+                  card.style.display = "block";
+              } else {
+                  card.style.display = "none";
+              }
+          });
+      });
+
+      // Show first shop by default
+      window.onload = function() {
+          showShopOnMap(1);
+      };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1379 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Chinfin Gold </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/fav-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Pe-icon-7-stroke CSS -->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="assets/css/jqueryui.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-secondary: #FFD700;
+            --gold-dark: #996515;
+        }
+
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--gold-primary) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .coin-display {
+            position: relative;
+            perspective: 1000px;
+            margin: 0 auto;
+            width: 420px;
+            height: 300px;
+        }
+
+        .coin {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .coin-front,
+        .coin-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .coin-back {
+            transform: rotateY(180deg);
+        }
+
+        .coin:hover {
+            transform: rotateY(180deg);
+        }
+
+        .coin-design {
+            width: 240%;
+            height: 80%;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .specs-card {
+            border-left: 4px solid var(--gold-primary);
+            transition: transform 0.3s;
+        }
+
+        .specs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card {
+            background: linear-gradient(to bottom right, #fff, #f8f9fa);
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            padding: 4rem 0;
+        }
+
+        .btn-gold {
+            background: linear-gradient(to right, var(--gold-primary), var(--gold-secondary));
+            color: white;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 20px 35px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .card-text{
+            font-size: 16px;
+        }
+
+
+
+        .counter {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+        }
+
+        .limited-badge {
+            position: absolute;
+            top: -10px;
+            right: 37px;
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(15deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .flip-btn {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 5;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .coin-display {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hero-section {
+                padding: 2rem 0;
+            }
+        }
+
+
+        .coins-brand {
+            width: 55px;
+        }
+
+        .title-color {
+            color: #a18119;
+        }
+
+        .fw-semibold {
+            font-weight: 500;
+        }
+
+
+
+
+
+
+
+        .gold-coin-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+        }
+
+        .coin-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+
+        .coin-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .coins {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            transform-style: preserve-3d;
+            animation: rotate-coin 7s infinite linear;
+        }
+
+
+        .coin-value {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: #333;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .coin-text {
+            font-size: 0.9rem;
+        }
+
+        .content-title {
+            color: #D4AF37;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .content-text {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-size: 16px;
+
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 16px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: #D4AF37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @keyframes rotate-coin {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .coin-container {
+                margin-bottom: 40px;
+                max-width: 200px;
+            }
+
+            .content-title {
+                text-align: center;
+            }
+
+            .content-text {
+                text-align: center;
+            }
+
+            .btn-gold {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        .gold-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        .gold-header {
+            background: linear-gradient(to right, #bf862e, var(--gold-primary));
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .gold-header h2 {
+            margin: 0;
+            font-weight: 700;
+            color: white;
+        }
+
+        .form-container {
+            padding: 30px;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--bs-body-color);
+            background-color: var(--bs-body-bg);
+            background-clip: padding-box;
+            border: var(--bs-border-width) solid var(--bs-border-color);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: var(--bs-border-radius);
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+        }
+
+
+        .loan-cta {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            border-left: 4px solid var(--gold-primary);
+            padding: 30px;
+            border-radius: 0 0 5px 5px;
+            margin-top: 40px;
+        }
+
+        .loan-cta h4 {
+            color: var(--gold-dark);
+            margin-bottom: 15px;
+        }
+
+        .btn-loan {
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-loan:hover {
+            background: linear-gradient(to right, #444, #666);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .form-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: var(--gold-primary);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-control.with-icon {
+            padding-left: 45px;
+        }
+
+        .gold-coin-icon {
+            color: var(--gold-primary);
+            margin-right: 10px;
+        }
+
+        @media (max-width: 767.98px) {
+            .gold-section {
+                margin: 15px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+
+        .form-select,
+        .form-control {
+            float: none;
+            width: 100%;
+            background-image: none;
+            border-radius: 10px;
+            border: 1px solid #bababa;
+            font-size: 13px;
+            line-height: 2.3;
+        }
+
+
+
+
+        @media only screen and (min-width: 320px) and (max-width: 450px) {
+            .btn-gold{
+                float: left;
+            }
+            .c-1{
+                padding-bottom: 30px;
+            }
+
+        }
+
+
+.speak-to{
+    color: #333;
+}
+
+.item-input-group {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .total-row {
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 15px 0;
+            border-top: 2px solid var(--primary-color);
+            margin-top: 10px;
+        }
+        
+        .remove-item-btn {
+            color: #fff;
+  background:#ff5b6b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  bottom: 11px;
+  border:1px solid #dc3545;
+  padding:5px;
+  border-radius:50%;
+  width: 30px;
+        }
+        .enquiry-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: none;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .total-row {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px 0;
+    border-top: 2px solid #d4af37;
+    margin-top: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-7 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="position-static"><a href="about.html">About Us</a>
+                                            </li>
+                                            <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="goldloan.html">Gold Loan</a>
+                                                    </li>
+                                                    <li><a href="sellgold.html">Sell Gold</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li  class="active"><a href="product.html">Buy 22K Gold Coin</a>
+                                            </li>
+                                            <li><a href="location.html">Location</a>
+                                            </li>
+                                            <li><a href="contactus.html">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start 
+                        <div class="col-lg-2">
+                            <div
+                                class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="minicart-btn">
+                                                <i class="pe-7s-shopbag"></i>
+                                                <div class="notification">2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                        <div class="col-lg-3 text-right">
+                            <div class="header-top-settings">
+                                <ul class="nav align-items-center justify-content-end">
+                                    <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
+                                                style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
+                                                class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
+                                            ₹9000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <button class="mobile-menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+        <!-- mobile header end -->
+
+        <!-- offcanvas mobile menu start -->
+        <!-- off-canvas menu start -->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-overlay"></div>
+            <div class="off-canvas-inner-content">
+                <div class="btn-close-off-canvas">
+                    <i class="pe-7s-close"></i>
+                </div>
+
+                <div class="off-canvas-inner">
+
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children "><a href="#">Our Services</a>
+                                    <ul class="dropdown">
+                                        <li class="menu-item-has-children"><a href="goldloan.html">Gold Loan</a> </li>
+                                        <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children "><a href="product.html">Buy 22k Gold COin</a> </li>
+                                <li><a href="location.html">Location</a>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mobile menu navigation end -->
+                    </div>
+                    <!-- mobile menu end -->
+
+
+
+                </div>
+            </div>
+        </aside>
+        <!-- off-canvas menu end -->
+        <!-- offcanvas mobile menu end -->
+    </header>
+    <!-- end Header Area -->
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+
+                    <h1 class="display-4 fw-bold mb-4 title-color">22K Pure Gold Coin</h1>
+                    <p class="lead mb-4 fw-semibold">A masterpiece of craftsmanship and purity. Each coin is minted with precision and carries the legacy of golden heritage.</p>
+
+                    <a href="#enquiry-form"><button class="btn btn-gold me-3 mb-3">
+                            <i class="fas fa-shopping-cart me-2"></i> Purchase Coin Now </button></a>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="coin-display">
+                      <!--   <div class="limited-badge"> 916 Hallmark Certified</div> -->
+                        <div class="coin">
+                            <div class="coin-front">
+                                <div class="coin-design">
+                                    <img src="assets/img/front-coin.png" alt="front-coin"/>
+
+                                </div>
+                            </div>
+                            <div class="coin-back">
+                                <div class="coin-design">
+                                    <img src="assets/img/back-coin.png" alt="front-coin"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-btn" onclick="document.querySelector('.coin').classList.toggle('flipped')">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="col-12">
+                <!-- section title start -->
+                <div class="section-title text-center">
+                    <h2 class="title">Technical Specifications</h2>
+                    <p class="lead text-muted">Precision crafted with the highest quality standards</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="specs-card card h-100 p-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light rounded p-3 me-3">
+                                    <i class="fas fa-weight fa-2x text-gold"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Weight</h5>
+                            </div>
+                            <p class="card-text">33.93 grams of pure 22K gold (91.67% purity)</p>
+                            <p class="card-text">Equivalent to 1 troy ounce</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="specs-card card h-100 p-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light rounded p-3 me-3">
+                                    <i class="fas fa-ruler-combined fa-2x text-gold"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Dimensions</h5>
+                            </div>
+                            <p class="card-text">32mm diameter with 2.63mm thickness</p>
+                            <p class="card-text  ">Perfectly round shape for easy stacking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="specs-card card h-100 p-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light rounded p-3 me-3">
+                                    <i class="fas fa-gem fa-2x text-gold"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Purity</h5>
+                            </div>
+                            <p class="card-text">22 karat gold (91.67% pure gold content)</p>
+                            <p class="card-text  ">Ideal balance of purity and durability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="specs-card card h-100 p-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-light rounded p-3 me-3">
+                                    <i class="fas fa-barcode fa-2x text-gold"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Security</h5>
+                            </div>
+                            <p class="card-text">Unique serial number on the edge</p>
+                            <p class="card-text  ">Tamper-proof packaging with certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="gold-coin-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0 c-1">
+                    <div class="col-lg-6">
+                        <div class="coin-display">
+                          <!--   <div class="limited-badge"> 916 Hallmark Certified</div> -->
+                            <div class="coin">
+                                <div class="coin-front">
+                                    <div class="coin-design">
+                                        <img src="assets/img/front-coin.png" alt="front-coin"/>
+    
+                                    </div>
+                                </div>
+                                <div class="coin-back">
+                                    <div class="coin-design">
+                                        <img src="assets/img/back-coin.png" alt="front-coin"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-btn" onclick="document.querySelector('.coin').classList.toggle('flipped')">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 section-title ">
+                    <h2 class="title">The Pride of 22K Chinfin Gold Coin</h2>
+                    <p class="content-text">
+                        Our 22K Chinfin Gold Coin represents the pinnacle of craftsmanship and purity.
+                        Each coin is meticulously minted with the finest 91.67% pure gold, blending
+                        traditional techniques with modern precision to create a timeless treasure.
+                    </p>
+                    <ul class="feature-list">
+                        <li>91.67% pure gold (22 karat)</li>
+                        <li>Exquisite craftsmanship with intricate detailing</li>
+                        <li>Individually numbered for authenticity</li>
+                        <li>Comes with 916 Hallmark Certified</li>
+                        <li>Excellent store of value and heritage piece</li>
+                    </ul>
+                    <a href="#enquiry-form"> <button class="btn btn-gold mt-3">Purchase Coin Now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="col-12">
+                <!-- section title start -->
+                <div class="section-title text-center">
+                    <h2 class="title">Why Invest in Our Gold Coin?</h2>
+                    <p class="lead text-muted">Discover the advantages of owning this exquisite piece</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="card-title">Wealth Preservation</h5>
+                            <p class="card-text">Gold has maintained its value for centuries, serving as a hedge against
+                                inflation and currency fluctuations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="benefit-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h5 class="card-title">High Purity</h5>
+                            <p class="card-text">91.67% pure gold content in the ideal 22K formulation that balances
+                                purity with durability for handling.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="benefit-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h5 class="card-title">Easy Liquidity</h5>
+                            <p class="card-text">Gold coins are widely accepted and easy to sell or exchange, making them a convenient investment with instant cash value.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="benefit-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h5 class="card-title">Perfect Gift</h5>
+                            <p class="card-text">An impressive and meaningful gift for weddings, anniversaries, or as a
+                                family heirloom.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Ready to Own a Piece of Lasting Value?</h2>
+                    <p class="lead mb-4">Each coin is a tangible asset that can be passed down through generations.
+                        Don't miss this opportunity to secure your financial future.</p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#enquiry-form"> <button class="btn btn-gold me-3 mb-3">
+                                <i class="fas fa-credit-card me-2"></i>Buy Now
+                            </button></a>
+                        <button class="btn mb-3">
+                            <a href="contactus.html" class="speak-to"><i class="fas fa-phone me-2"></i>Speak to an Expert</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h5 class="fw-bold mb-4"><i class="fas fa-shield-alt text-gold me-2"></i>Purchase with
+                            Confidence</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Secure Gold Purchases
+                            </li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Guaranteed
+                                Authenticity
+                            </li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Easy Gold Loans
+                            </li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Discreet packaging
+                            </li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> 24/7 customer support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="container py-5" id="enquiry-form">
+        <div class="gold-section">
+            <div class="gold-header">
+                <h2><i class="fas fa-coins gold-coin-icon"></i> Gold Coin Enquiry</h2>
+            </div>
+
+            <div class="form-container">
+                <form id="goldCoinForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <i class="fas fa-user form-icon"></i>
+                                <input type="text" class="form-control with-icon" id="fullName" placeholder="Full Name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <i class="fas fa-envelope form-icon"></i>
+                                <input type="email" class="form-control with-icon" id="email"
+                                    placeholder="Email Address" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <i class="fas fa-phone form-icon"></i>
+                                <input type="tel" class="form-control with-icon" id="phone" placeholder="Phone Number"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <i class="fas fa-map-marker-alt form-icon"></i>
+                                <input type="text" class="form-control with-icon" id="location" placeholder="City/State"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4 mb-3">Gold Items (22K Coins)</h5>
+                            
+                    <div id="itemInputsContainer">
+                        <!-- Initial item input -->
+                        <div class="item-input-group" id="itemInputTemplate">
+                            <div class="row">
+                                <div class="col-md-4 mb-2">
+                                    <label class="form-label">Item Type</label>
+                                    <select class="form-select item-type">
+                                        <option value="22k Coin" selected>22K Coin</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label class="form-label">Grams</label>
+                                    <select class="form-select item-grams">
+                                        <option value=".5">1/2g</option>
+                                        <option value="1">1g</option>
+                                        <option value="2">2g</option>
+                                        <option value="5">5g</option>
+                                        <option value="8">8g</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" class="form-control item-quantity" placeholder="1" min="1" value="1">
+                                </div>
+                                <div class="col-md-2 mb-2 d-flex align-items-end">
+                                    <button type="button" class="btn btn-outline-danger remove-item-btn">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4 mb-4">
+                        <button type="button" class="btn btn-outline-gold" id="addMoreBtn">
+                            <i class="fas fa-plus me-2"></i> Add Another Item
+                        </button>
+                    </div>
+                    
+                    <div class="total-row d-flex justify-content-between">
+                        <span>Total Items:</span>
+                        <span id="totalItems">1</span>
+                    </div>
+                    
+                    <div class="total-row d-flex justify-content-between">
+                        <span>Total Grams:</span>
+                        <span id="totalGrams">1g</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label for="notes" class="form-label">Additional Notes</label>
+                        <textarea class="form-control" id="notes" rows="3" placeholder="Any special instructions"></textarea>
+                    </div>
+        
+
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                        <label class="form-check-label" for="agreeTerms">
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                    </div>
+
+              
+
+
+                    <button type="submit" class="btn btn-golds mt-3">
+                        <i class="fas fa-paper-plane"></i> Submit Enquiry
+                    </button>
+                </form>
+
+                <div class="loan-cta">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h4>We provide Loan for Gold Coins!</h4>
+                            <p class="mb-0">Get instant approval with competitive interest rates from Chinmaya Finance
+                            </p>
+                        </div>
+                        <a href="goldloan.html" class="btn btn-loan">
+                            <i class="fas fa-hand-holding-usd"></i> Apply for Gold Coin Loan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- service policy area start -->
+    <div class="service-policy section-padding">
+        <div class="container">
+            <div class="row mtn-30">
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-safe"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>100% Authentic & Certified</h6>
+                            <p>Guaranteed purity and trust</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Great Investment</h6>
+                            <p>Secure your wealth with lasting value</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-gift"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Perfect Gift Choice</h6>
+                            <p>A timeless and meaningful present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 promise">
+                    <div class="policy-item">
+                        <div class="policy-icon">
+                            <i class="pe-7s-medal"></i>
+                        </div>
+                        <div class="policy-content">
+                            <h6>Compact & Valuable</h6>
+                            <p>Small in size, big in worth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service policy area end -->
+
+
+
+
+
+
+
+
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+    <footer class="footer-widget-area">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <div class="widget-title">
+                                <div class="widget-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>We are a team of designers and developers that create high quality wordpress,
+                                    shopify, Opencart </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Contact Us</h6>
+                            <div class="widget-body">
+                                <address class="contact-block">
+                                    <ul>
+                                        <li><i class="pe-7s-home"></i>
+                                            No.32, Pazhaninathan Complex, Reserve Line, Aathikulam Main Road, Madurai,
+                                            Tamil Nadu 625007</li>
+                                        <li><i class="pe-7s-mail"></i> <a
+                                                href="mailto:demo@plazathemes.com">support@chinfingold.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">0452 4230855</a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Information</h6>
+                            <div class="widget-body">
+                                <ul class="info-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="goldloan.html">Gold Loan</a></li>
+
+                                    <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                    <li><a href="sellgold.html">Sell Gold</a></li>
+
+                                    <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                    <li><a href="product.html">Buy 22k Gold Coin</a></li>
+
+
+                                    <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                                    <li><a href="contactus.html">contact Us</a></li>
+                                    <li><a href="location.html"> Locations</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Follow Us</h6>
+                            <div class="widget-body social-link">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-text text-center">
+                            <p>&copy; 2025 <b>Chinfingold</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- slick Slider JS -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="assets/js/countdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- jquery UI JS -->
+    <script src="assets/js/jqueryui.min.js"></script>
+    <!-- Image zoom JS -->
+    <script src="assets/js/image-zoom.min.js"></script>
+    <!-- Images loaded JS -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- mail-chimp active js -->
+    <script src="assets/js/ajaxchimp.js"></script>
+    <!-- contact form dynamic js -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="assets/js/google-map.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('itemInputsContainer');
+            const template = document.getElementById('itemInputTemplate');
+            
+            // Remove the template from DOM (we'll use it for cloning)
+            template.remove();
+            template.id = '';
+            
+            // Add event listeners to the initial item
+            addItemEventListeners(template);
+            container.appendChild(template);
+            
+            // Add more button
+            document.getElementById('addMoreBtn').addEventListener('click', function() {
+                const newItem = template.cloneNode(true);
+                addItemEventListeners(newItem);
+                container.appendChild(newItem);
+                calculateTotals();
+            });
+            
+            // Form submission
+            document.getElementById('goldEnquiryForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your enquiry! We will contact you shortly.');
+                this.reset();
+                
+                // Reset to one item
+                container.innerHTML = '';
+                const newItem = template.cloneNode(true);
+                addItemEventListeners(newItem);
+                container.appendChild(newItem);
+                calculateTotals();
+            });
+            
+            // Add event listeners to an item
+            function addItemEventListeners(item) {
+                // Quantity input
+                item.querySelector('.item-quantity').addEventListener('input', calculateTotals);
+                
+                // Grams select
+                item.querySelector('.item-grams').addEventListener('change', calculateTotals);
+                
+                // Remove button
+                item.querySelector('.remove-item-btn').addEventListener('click', function() {
+                    // Don't allow removing the last item
+                    if (container.children.length > 1) {
+                        item.remove();
+                        calculateTotals();
+                    }
+                });
+            }
+            
+            // Calculate totals
+            function calculateTotals() {
+                let totalItems = 0;
+                let totalGrams = 0;
+                
+                // Loop through all items
+                container.querySelectorAll('.item-input-group').forEach(item => {
+                    const quantity = parseInt(item.querySelector('.item-quantity').value) || 0;
+                    const grams = parseInt(item.querySelector('.item-grams').value) || 0;
+                    
+                    totalItems += quantity;
+                    totalGrams += quantity * grams;
+                });
+                
+                // Update UI
+                document.getElementById('totalItems').textContent = totalItems;
+                document.getElementById('totalGrams').textContent = totalGrams + 'g';
+            }
+            
+            // Initial calculation
+            calculateTotals();
+        });
+    </script>
+</body>
+
+</html>

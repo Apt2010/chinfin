@@ -35,13 +35,114 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .p {
-            font-size: 15px;
+        .gold-gradient {
+            background: linear-gradient(135deg, #f5d27a 0%, #D4AF37 50%, #b7950b 100%);
+            color: white;
         }
 
+        .contact-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: none;
+            overflow: hidden;
+        }
+
+        .contact-header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 8px;
+            padding: 10px 15px;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-gold {
+            background-color: #D4AF37;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background-color: #b7950b;
+            color: white;
+        }
+
+        .address-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            height: 100%;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AF37;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h5 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            margin-bottom: 0;
+            color: #6c757d;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            margin-top: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
         .gold-header {
             background: url('https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            padding: 100px 0;
+            padding: 60px 0px 20px;
             position: relative;
         }
 
@@ -55,157 +156,19 @@
             background: rgb(238 238 238 / 70%);
         }
 
-        .page-title {
-            position: relative;
-            color: white;
-            text-align: center;
-        }
-
-        .page-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #D4AF37;
-        }
-
-        /* FAQ Search Section */
-        .faq-search {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-            border-top: 4px solid #D4AF37;
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-        .search-box input {
-            padding-left: 50px;
-            border-radius: 50px;
-            border: 1px solid #ddd;
-            height: 50px;
-        }
-
-        .search-box i {
-            position: absolute;
-            left: 20px;
-            top: 15px;
-            color: #D4AF37;
-            font-size: 1.2rem;
-        }
-
-        /* FAQ Accordion */
-        .faq-accordion .accordion-item {
-            border: none;
-            border-radius: 5px !important;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-
-        .faq-accordion .accordion-button {
-            background: white;
-            color: #0A0A0A;
-            font-weight: 600;
-            padding: 20px 25px;
-            box-shadow: none !important;
-        }
-
-        .faq-accordion .accordion-button:not(.collapsed) {
-            background:
-                white;
-            color: #D4AF37;
-            font-size: 18px;
-        }
-
-        .faq-accordion .accordion-button:after {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-        }
-
-        .faq-accordion .accordion-body {
-            padding: 20px 25px;
-            background: rgba(212, 175, 55, 0.05);
-            font-size: 16px;
-        }
-
-        /* Feedback Section */
-        .feedback-section {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            margin: 50px 0;
-            border-top: 4px solid #D4AF37;
-        }
-
-        .feedback-form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* Question Form */
-        .question-form {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 50px;
-            border-top: 4px solid #D4AF37;
-        }
-
-        /* Gold Buttons */
-        .btn-gold {
-            background: linear-gradient(to right, #d4af37, #ffd700);
-            color: #f9f9f9;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-gold:hover {
-            background: linear-gradient(to right, #d4af37, #ffd700);
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
+             /* Responsive Adjustments */
+             @media (max-width: 768px) {
             .gold-header {
                 padding: 80px 0;
             }
 
-            .faq-search {
-                margin-top: -30px;
+        }
+
+        @media (max-width: 767.98px) {
+            .address-card {
+                margin-top: 30px;
             }
         }
-
-
-        .keywords {
-            font-size: 16px;
-        }
-
-        .btn-outline-success {
-            border: 1px solid green;
-            padding: 10px;
-        }
-
-        .btn-outline-danger {
-            border: 1px solid rgb(147, 8, 8);
-            padding: 10px;
-        }
-
 
         .form-select,
         .form-control {
@@ -216,190 +179,501 @@
             border: 1px solid #bababa;
         }
 
-        .btn-outline-secondary {
-            padding: 15px;
-            margin-top: 30px;
-            background-color: #4f5053;
-            color: white;
 
-        }
 
-        .card-text {
-            font-size: 16px;
-            padding:
-                10px 0px;
-        }
 
-        .list-unstyled ul li {
-            font-size: 16px;
-        }
+
+
+
+
+
+               
+        /* FAQ Search Section */
+        .faq-search {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin-top: -50px;
+          position: relative;
+          z-index: 10;
+          border-top: 4px solid #D4AF37;
+      }
+
+      .search-box {
+          position: relative;
+      }
+
+      .search-box input {
+          padding-left: 50px;
+          border-radius: 50px;
+          border: 1px solid #ddd;
+          height: 50px;
+      }
+
+      .search-box i {
+          position: absolute;
+          left: 20px;
+          top: 15px;
+          color: #D4AF37;
+          font-size: 1.2rem;
+      }
+
+      /* FAQ Accordion */
+      .faq-accordion .accordion-item {
+          border: none;
+          border-radius: 5px !important;
+          margin-bottom: 15px;
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+          overflow: hidden;
+      }
+
+      .faq-accordion .accordion-button {
+          background: white;
+          color: #0A0A0A;
+          font-weight: 600;
+          padding: 20px 25px;
+          box-shadow: none !important;
+      }
+
+      .faq-accordion .accordion-button:not(.collapsed) {
+          background:
+              white;
+          color: #D4AF37;
+          font-size: 18px;
+      }
+
+      .faq-accordion .accordion-button:after {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .faq-accordion .accordion-body {
+          padding: 20px 25px;
+          background: rgba(212, 175, 55, 0.05);
+          font-size: 16px;
+      }
+
+      /* Feedback Section */
+      .feedback-section {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin: 50px 0;
+          border-top: 4px solid #D4AF37;
+      }
+
+      .feedback-form textarea {
+          min-height: 120px;
+          resize: vertical;
+      }
+
+      /* Question Form */
+      .question-form {
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          margin-bottom: 50px;
+          border-top: 4px solid #D4AF37;
+      }
+
+      /* Gold Buttons */
+      .btn-gold {
+          background: linear-gradient(to right, #d4af37, #ffd700);
+          color: #f9f9f9;
+          border: none;
+          padding: 12px 30px;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+      }
+
+      .btn-gold:hover {
+          background: linear-gradient(to right, #d4af37, #ffd700);
+          color: #ffffff;
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+          .gold-header {
+              padding: 80px 0;
+          }
+
+          .faq-search {
+              margin-top: -30px;
+          }
+      }
+
+
+      .keywords {
+          font-size: 16px;
+      }
+
+      .btn-outline-success {
+          border: 1px solid green;
+          padding: 10px;
+      }
+
+      .btn-outline-danger {
+          border: 1px solid rgb(147, 8, 8);
+          padding: 10px;
+      }
+
+
+      .form-select,
+      .form-control {
+          float: none;
+          width: 100%;
+          background-image: none;
+          border-radius: 10px;
+          border: 1px solid #bababa;
+      }
+
+      .btn-outline-secondary {
+          padding: 15px;
+          margin-top: 30px;
+          background-color: #4f5053;
+          color: white;
+
+      }
+
+      .card-text {
+          font-size: 16px;
+          padding:
+              10px 0px;
+      }
+
+      .list-unstyled ul li {
+          font-size: 16px;
+      }
+
+      .location-btn{
+        padding:
+10px 30px;
+  border:
+1px solid gold;
+  font-size: 15px;
+  width: 100%;
+      }
+
+
     </style>
+
 </head>
 
 <body>
-   <!-- Start Header Area -->
-   <header class="header-area header-wide">
-    <!-- main header start -->
-    <div class="main-header d-none d-lg-block">
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
 
-        <!-- header middle area start -->
-        <div class="header-main-area sticky">
-            <div class="container">
-                <div class="row align-items-center position-relative">
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
 
-                    <!-- start logo area -->
-                    <div class="col-lg-2">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- start logo area -->
-
-                    <!-- main menu area start -->
-                    <div class="col-lg-7 position-static">
-                        <div class="main-menu-area">
-                            <div class="main-menu">
-                                <!-- main menu navbar start -->
-                                <nav class="desktop-menu">
-                                    <ul>
-                                        <li><a href="index.html">Home</a>
-                                        </li>
-                                        <li class="position-static"><a href="about.html">About Us</a>
-                                        </li>
-                                        <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
-                                            <ul class="dropdown">
-                                                <li><a href="goldloan.html">Gold Loan</a>
-                                                </li>
-                                                <li><a href="sellgold.html">Sell Gold</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="product.html">Buy 22K Gold Coin</a>
-                                        </li>
-                                        <li><a href="location.html">Location</a>
-                                        </li>
-                                        <li><a href="contactus.html">Contact us</a></li>
-                                    </ul>
-                                </nav>
-                                <!-- main menu navbar end -->
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <!-- main menu area end -->
+                        <!-- start logo area -->
 
-                    <!-- mini cart area start 
-                    <div class="col-lg-2">
-                        <div
-                            class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
-                            <div class="header-configure-area">
-                                <ul class="nav justify-content-end">
-                                    <li>
-                                        <a href="#" class="minicart-btn">
-                                            <i class="pe-7s-shopbag"></i>
-                                            <div class="notification">2</div>
-                                        </a>
+                        <!-- main menu area start -->
+                        <div class="col-lg-7 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="position-static"><a href="about.html">About Us</a>
+                                            </li>
+                                            <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="goldloan.html">Gold Loan</a>
+                                                    </li>
+                                                    <li><a href="sellgold.html">Sell Gold</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="product.html">Buy 22K Gold Coin</a>
+                                            </li>
+                                            <li><a href="location.html">Location</a>
+                                            </li>
+                                            <li  class="active"><a href="contactus.html">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start 
+                        <div class="col-lg-2">
+                            <div
+                                class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="minicart-btn">
+                                                <i class="pe-7s-shopbag"></i>
+                                                <div class="notification">2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                        <div class="col-lg-3 text-right">
+                            <div class="header-top-settings">
+                                <ul class="nav align-items-center justify-content-end">
+                                    <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
+                                                style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
+                                                class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
+                                            ₹9000</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <!-- mini cart area end -->
 
-                    <div class="col-lg-3 text-right">
-                        <div class="header-top-settings">
-                            <ul class="nav align-items-center justify-content-end">
-                                <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
-                                            style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
-                                            class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
-                                        ₹9000</span>
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <button class="mobile-menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+        <!-- mobile header end -->
+
+        <!-- offcanvas mobile menu start -->
+        <!-- off-canvas menu start -->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-overlay"></div>
+            <div class="off-canvas-inner-content">
+                <div class="btn-close-off-canvas">
+                    <i class="pe-7s-close"></i>
+                </div>
+
+                <div class="off-canvas-inner">
+
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children "><a href="#">Our Services</a>
+                                    <ul class="dropdown">
+                                        <li class="menu-item-has-children"><a href="goldloan.html">Gold Loan</a> </li>
+                                        <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
+                                    </ul>
                                 </li>
+                                <li class="menu-item-has-children "><a href="product.html">Buy 22k Gold COin</a> </li>
+                                <li><a href="location.html">Location</a>
+                                <li><a href="contactus.html">Contact Us</a></li>
                             </ul>
-                        </div>
+                        </nav>
+                        <!-- mobile menu navigation end -->
                     </div>
+                    <!-- mobile menu end -->
+
+
 
                 </div>
             </div>
-        </div>
-        <!-- header middle area end -->
-    </div>
-    <!-- main header start -->
+        </aside>
+        <!-- off-canvas menu end -->
+        <!-- offcanvas mobile menu end -->
+    </header>
+    <!-- end Header Area -->
 
-    <!-- mobile header start -->
-    <!-- mobile header start -->
-    <div class="mobile-header d-lg-none d-md-block sticky">
-        <!--mobile header top start -->
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <div class="mobile-main-header">
-                        <div class="mobile-logo">
-                            <a href="index.html">
-                                <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
-                            </a>
+
+       <!-- FAQ Header -->
+       <header class="gold-header">
+        <div class="container position-relative">
+            <div class="col-12">
+                <!-- section title start -->
+                <div class="section-title text-center">
+                    <h2 class="title">Contact Chinfingold</h2>
+                    <p class="lead text-muted">Get in touch with our gold experts for any enquiries</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Address Section -->
+            <div class="col-lg-5">
+                <div class="address-card">
+                    <h3 class="section-title">Our Office</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="mobile-menu-toggler">
-                            <button class="mobile-menu-btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                        <div class="contact-info">
+                            <h5>Headquarters</h5>
+                            <p>Chinmaya Finance Capital Pvt Ltd,<br>
+                                D.No. 38C, AA Road, Gnanaolivupuram,<br>
+                                Madurai - 625 016 Tamilnadu, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h5>Phone</h5>
+                            <p>+91 98765 43210<br>
+                                +0452 4200800</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h5>Email</h5>
+                            <p>support@chinfingold.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h5>Working Hours</h5>
+                            <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                                Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="location.html"><button class="btn-g"> <i class="fas fa-location"></i>   Location</button></a>
+                    </div>
+
+                 
+
+
+             <!--        <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7711012699933!2d78.13027207450801!3d9.952993273842852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5e0bcc0554b%3A0x25ce64e358c6898a!2sChinmaya%20Finance%20Capital%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1743143005407!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div class="col-lg-7">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h3 class="mb-0" style="color: white;"><i class="fas fa-envelope me-2"></i> Quick Enquiry</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Enter your name"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone"
+                                        placeholder="Enter your phone number" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Select enquiry type</option>
+                                    <option value="Gold Purchase">Gold Purchase</option>
+                                    <option value="Gold Loan">Gold Coin Loan</option>
+                                    <option value="Gold Investment">Sell Gold</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="Enter your message"></textarea>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                <label class="form-check-label" for="agreeTerms">
+                                    I agree to the terms and conditions and authorize Chinfingold to contact me
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-golds w-100">
+                                <i class="fas fa-paper-plane me-2"></i> Send Enquiry
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- mobile header top start -->
     </div>
-    <!-- mobile header end -->
-    <!-- mobile header end -->
-
-    <!-- offcanvas mobile menu start -->
-    <!-- off-canvas menu start -->
-    <aside class="off-canvas-wrapper">
-        <div class="off-canvas-overlay"></div>
-        <div class="off-canvas-inner-content">
-            <div class="btn-close-off-canvas">
-                <i class="pe-7s-close"></i>
-            </div>
-
-            <div class="off-canvas-inner">
-
-                <!-- mobile menu start -->
-                <div class="mobile-navigation">
-
-                    <!-- mobile menu navigation start -->
-                    <nav>
-                        <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><a href="index.html">Home</a></li>
-                            <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
-                            <li class="menu-item-has-children "><a href="#">Our Services</a>
-                                <ul class="dropdown">
-                                    <li class="menu-item-has-children"><a href="goldloan.html">Gold Loan</a> </li>
-                                    <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="product.html">Buy 22k Gold COin</a> </li>
-                            <li><a href="location.html">Location</a>
-                            <li><a href="contactus.html">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                    <!-- mobile menu navigation end -->
-                </div>
-                <!-- mobile menu end -->
 
 
 
-            </div>
-        </div>
-    </aside>
-    <!-- off-canvas menu end -->
-    <!-- offcanvas mobile menu end -->
-</header>
-<!-- end Header Area -->
 
-
+    <div class="container mt-4">
     <!-- FAQ Header -->
     <header class="gold-header">
         <div class="container position-relative">
@@ -412,27 +686,6 @@
             </div>
         </div>
     </header>
-
-
-    <div class="container">
-        <!-- FAQ Search -->
-        <div class="faq-search">
-            <h3 class="mb-4">How can we help you today?</h3>
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" class="form-control"
-                    placeholder="Search our FAQs... (e.g. 'gold purity', 'loan rates')">
-            </div>
-            <div class="mt-3 keywords">
-                <span class="text-muted">Popular searches: </span>
-                <a href="#buying" class="badge bg-light text-dark me-2">Buying Gold</a>
-                <a href="#selling" class="badge bg-light text-dark me-2">Selling Gold</a>
-                <a href="#loans" class="badge bg-light text-dark me-2">Gold Loans</a>
-                <a href="#purity" class="badge bg-light text-dark">Gold Purity</a>
-            </div>
-        </div>
-
-
 
         <!-- FAQ Content -->
         <div class="row mt-4">
@@ -657,11 +910,6 @@
 
 
 
-
-
-
-
-
     <!-- service policy area start -->
     <div class="service-policy section-padding">
         <div class="container">
@@ -765,20 +1013,20 @@
                             <h6 class="widget-title">Information</h6>
                             <div class="widget-body">
                                 <ul class="info-list">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Gold Loan</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="goldloan.html">Gold Loan</a></li>
 
-                                    <li><a href="#">Refund Policy</a></li>
-                                    <li><a href="#">Sell Gold</a></li>
+                                    <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                    <li><a href="sellgold.html">Sell Gold</a></li>
 
-                                    <li><a href="#">Privacy policy</a></li>
-                                    <li><a href="#">Buy 22k Gold Coin</a></li>
+                                    <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                    <li><a href="product.html">Buy 22k Gold Coin</a></li>
 
 
-                                    <li><a href="#"> Terms & Conditions</a></li>
-                                    <li><a href="#">contact Us</a></li>
-                                    <li><a href="#"> Locations</a></li>
+                                    <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                                    <li><a href="contactus.html">contact Us</a></li>
+                                    <li><a href="location.html"> Locations</a></li>
 
                                 </ul>
                             </div>
@@ -812,6 +1060,9 @@
     </footer>
     <!-- footer area end -->
 
+
+
+
     <!-- JS
 ============================================ -->
 
@@ -844,42 +1095,11 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <script>
-        // FAQ Search Functionality
-        document.getElementById('faqSearch').addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const question = item.querySelector('.accordion-button').textContent.toLowerCase();
-                const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
-
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-                    item.style.display = 'block';
-                    // Open the accordion if it's closed
-                    const collapse = item.querySelector('.accordion-collapse');
-                    if (collapse && !collapse.classList.contains('show')) {
-                        new bootstrap.Collapse(collapse, { toggle: true });
-                    }
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        // Feedback form submission
-        document.querySelector('.feedback-form').addEventListener('submit', function (e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Thank you for your feedback! We appreciate your input.');
+            alert('Thank you for your enquiry! Our representative will contact you shortly.');
             this.reset();
         });
-
-        // Question form submission
-        document.getElementById('questionForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your question! Our team will respond within 24 hours.');
-            this.reset();
-        });
-
     </script>
 </body>
 

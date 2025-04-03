@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinfin Gold - Premium 916 Hallmark Gold</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #FFD700;
+            --dark-bg: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1611591437281-4608be122683') center/cover;
+            color: white;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .gold-text {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            background: var(--dark-bg);
+            padding: 20px;
+            text-align: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img img {
+            max-height: 160px;
+            object-fit: contain;
+        }
+        
+        .product-weight {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+        
+        .highlight-section {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .highlight-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+        }
+        
+        .packaging-img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 15px;
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-gold);
+        }
+        
+        .footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-gold);
+        }
+        
+        .hallmark-badge {
+            background-color: var(--primary-gold);
+            color: black;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .btn-gold {
+            background-color: var(--primary-gold);
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+        
+        .btn-gold:hover {
+            background-color: var(--secondary-gold);
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--primary-gold);
+            bottom: -10px;
+            left: 25%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="gold-text">CHINFIN</span> GOLD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="hallmark-badge">HALLMARK 916</div>
+            <h1 class="display-3 fw-bold mb-4">Pure Gold, Pure Trust</h1>
+            <p class="lead mb-5">Chinfin Gold offers premium 22K (916) gold in meticulously crafted weights, perfect for investment, gifting, and personal collection.</p>
+            <a href="#products" class="btn btn-gold btn-lg">Explore Our Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Our Premium Gold Collection</h2>
+            <p class="text-center mb-5">Available in various weights to suit every need and occasion</p>
+            
+            <div class="row">
+                <!-- 1g Card -->
+                <div class="col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://via.placeholder.com/150x80?text=1g+Gold" alt="1g Gold Bar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">1 Gram</h5>
+                            <p class="product-weight">1g</p>
+                            <p class="card-text">Perfect for small investments and gifts</p>
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5g Card -->
+                <div class="col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://via.placeholder.com/150x80?text=5g+Gold" alt="5g Gold Bar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">5 Grams</h5>
+                            <p class="product-weight">5g</p>
+                            <p class="card-text">Ideal for meaningful gifts and investments</p>
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 8g Card -->
+                <div class="col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://via.placeholder.com/150x80?text=8g+Gold" alt="8g Gold Bar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">8 Grams</h5>
+                            <p class="product-weight">8g</p>
+                            <p class="card-text">Substantial investment with high polish finish</p>
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More weights would be added similarly -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <p>Also available in: ½g, 2g, 3g, 4g, 6g, 7g</p>
+                <a href="#" class="btn btn-gold">View All Weights</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Features -->
+    <section id="features" class="highlight-section py-5">
+        <div class="container">
+            <h2 class="text-center section-title text-white">Why Choose Chinfin Gold?</h2>
+            
+            <div class="row text-center mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>916 Hallmark Certified</h4>
+                    <p>Each piece comes with HUID certification guaranteeing 91.6% pure gold (22K) as per BIS standards.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>High-Polish Finish</h4>
+                    <p>Premium craftsmanship with mirror-like polish that enhances beauty and maintains luster.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Tamper-Proof Packaging</h4>
+                    <p>Secure blister packs that ensure authenticity and prevent tampering during transit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <img src="https://via.placeholder.com/600x400?text=Gold+Packaging" alt="Gold Packaging" class="packaging-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">The Chinfin Gold Story</h2>
+                    <p>Founded on the principles of trust and purity, Chinfin Gold brings you investment-grade gold with uncompromising quality standards.</p>
+                    <p>Each piece undergoes rigorous quality checks and is hallmarked by Bureau of Indian Standards (BIS) approved centers, ensuring you receive genuine 916 purity gold.</p>
+                    <p>Our high-polish finish and premium craftsmanship make Chinfin Gold not just an investment, but a work of art that can be proudly displayed or gifted on special occasions.</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-gold me-2">Learn More</a>
+                        <a href="#contact" class="btn btn-outline-dark">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Perfect For Every Purpose</h2>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <
