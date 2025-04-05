@@ -2860,11 +2860,12 @@ only screen and (max-width: 767.98px) {
   display: flex;
   margin-top: 30px;
   margin-bottom: -3px;
-
-  background: #F1F1F8;
+  box-shadow: -4px 0px 0px 1px #6743ef;
+  background: #fff;
     padding: 20px 13px;
     border-radius: 5px;
 }
+
 
 @media only screen and (max-width: 767.98px) {
   .policy-item {
@@ -2882,7 +2883,7 @@ only screen and (max-width: 767.98px) {
 .policy-icon {
   font-size: 30px;
   line-height: 1;
-  color: #c29958;
+  color: #6743ef;
   padding-right: 16px;
 }
 
@@ -6868,12 +6869,12 @@ only screen and (max-width: 767.98px) {
   font-size: 18px;
   line-height: 40px;
   margin-right: 10px;
-  color: #777777;
+  color: #fff;
   display: inline-block;
   text-align: center;
-  background-color: #fff;
+  background-color: #6743ef;
   border-radius: 50%;
-  border: 1px solid #dedede;
+  border: 1px solid #6743ef;
 }
 
 .social-link a:last-child {
@@ -7096,17 +7097,17 @@ only screen and (max-width: 767.98px) {
 
 .btn-apply-now{
   padding: 10px;
-    margin-top: 30px;
-    border: 1px solid #ffffff;
-    width: 160px;
-    text-align: center;
-    border-radius: 50px;
-    background: white;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000000;
-    position: relative;
-    z-index: 2;
+  margin-top: 30px;
+  width: 160px;
+  text-align: center;
+  border-radius: 50px;
+  background: white;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
 }
 
 
@@ -7166,6 +7167,7 @@ only screen and (max-width: 767.98px) {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
+    background-image: url(../img/bg.png);
 }
 
 .gold-coin-banner::before {
@@ -7382,6 +7384,7 @@ font-size: 16px;
   background-color: linear-gradient(135deg, #b7950b 0%, #D4AF37 50%,  #f5d27a 100%);
   color: white;
   padding: 15px;
+  background-image: url(../img/bg.png);
 }
 
 .form-label {
@@ -7499,6 +7502,7 @@ font-size: 16px;
   background: linear-gradient(to right, #bf862e, #D4AF37);
   color: white;
   padding: 20px 30px;
+  background-image: url(../img/bg.png);
 }
 
 .gold-header h3 {
@@ -7510,8 +7514,8 @@ font-size: 16px;
 
 
 .btn-golds {
-  background: linear-gradient(to right, #D4AF37, #FFD700);
-  color: #333;       
+  background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
+  color: #000;       
   border: none;
   font-weight: 600;
   padding: 20px 30px;
@@ -7522,6 +7526,8 @@ font-size: 16px;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  color: #fff;
+  font-weight: 900;
 }
 
 .btn-golds:hover {
@@ -7586,13 +7592,13 @@ font-size: 16px;
 .feature-icon {
   width: 80px;
   height: 80px;
-  background-color: rgba(212, 175, 55, 0.1);
+  background-color: #6742f0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 25px;
-  color: #D4AF37;
+  color: #fff;
   font-size: 2rem;
 }
 

@@ -52,6 +52,7 @@
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
             padding: 4rem 0;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background-image: url("./assets/img/bg.png");
         }
 
         .coin-display {
@@ -104,7 +105,8 @@
         }
 
         .specs-card {
-            border-left: 4px solid var(--gold-primary);
+            /* border-left: 4px solid var(--gold-primary); */
+            border-left: 4px solid #6743ee;
             transition: transform 0.3s;
         }
 
@@ -127,17 +129,21 @@
 
         .benefit-icon {
             font-size: 2.5rem;
-            color: var(--gold-primary);
+            /* color: var(--gold-primary); */
+            color: #6743ef;
             margin-bottom: 1rem;
         }
 
         .cta-section {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+           background: linear-gradient(299deg, #7c4fd4 0%, rgb(114 62 159) 100%) ;
+              /*background-color: #6743ef;*/
             padding: 4rem 0;
+            background-image: url(./assets/img/sb1.png);
+
         }
 
         .btn-gold {
-            background: linear-gradient(to right, var(--gold-primary), var(--gold-secondary));
+            background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
             color: white;
             border: none;
             font-size: 17px;
@@ -353,9 +359,11 @@
         }
 
         .gold-header {
-            background: linear-gradient(to right, #bf862e, var(--gold-primary));
+            /* background: linear-gradient(to right, #bf862e, var(--gold-primary)); */
             color: white;
             padding: 20px 30px;
+            background: #6743ef;
+            
         }
 
         .gold-header h2 {
@@ -393,7 +401,9 @@
 
         .loan-cta {
             background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-            border-left: 4px solid var(--gold-primary);
+            background-color: #6642ee;
+            /* border-left: 4px solid var(--gold-primary); */
+            border-left: 4px solid #6642ee;
             padding: 30px;
             border-radius: 0 0 5px 5px;
             margin-top: 40px;
@@ -425,7 +435,8 @@
             top: 50%;
             transform: translateY(-50%);
             left: 15px;
-            color: var(--gold-primary);
+            color: #6743ef;
+            /* color: var(--gold-primary); */
         }
 
         .form-group {
@@ -438,8 +449,9 @@
         }
 
         .gold-coin-icon {
-            color: var(--gold-primary);
+            /* color: var(--gold-primary); */
             margin-right: 10px;
+            color: #fff;
         }
 
         @media (max-width: 767.98px) {
@@ -525,14 +537,16 @@
     border-top: 2px solid #d4af37;
     margin-top: 10px;
         }
+#addMoreBtn{
+    text-align: left;
+    background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
+    width: 190px;
+    padding: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
 
-
-
-
-
-
-
-
+}
 
 
     </style>
@@ -554,7 +568,7 @@
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                    <img src="assets/img/logo/logo.jpg" alt="Brand Logo" class="logo-header">
                                 </a>
                             </div>
                         </div>
@@ -639,7 +653,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                    <img src=" assets/img/logo/logo.jpg" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -709,8 +723,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
 
-                    <h1 class="display-4 fw-bold mb-4 title-color">22K Pure Gold Coin</h1>
-                    <p class="lead mb-4 fw-semibold">A masterpiece of craftsmanship and purity. Each coin is minted with precision and carries the legacy of golden heritage.</p>
+                    <h1 class="display-4 fw-bold mb-4 title-color" style="color: #fff;">22K Pure Gold Coin</h1>
+                    <p class="lead mb-4 fw-semibold" style="color: #fff;">A masterpiece of craftsmanship and purity. Each coin is minted with precision and carries the legacy of golden heritage.</p>
 
                     <a href="#enquiry-form"><button class="btn btn-gold me-3 mb-3">
                             <i class="fas fa-shopping-cart me-2"></i> Purchase Coin Now </button></a>
@@ -935,15 +949,15 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
-                    <h2 class="fw-bold mb-3">Ready to Own a Piece of Lasting Value?</h2>
-                    <p class="lead mb-4">Each coin is a tangible asset that can be passed down through generations.
+                    <h2 class="fw-bold mb-3" style="color: #fff;">Ready to Own a Piece of Lasting Value?</h2>
+                    <p class="lead mb-4" style="color: #fff;">Each coin is a tangible asset that can be passed down through generations.
                         Don't miss this opportunity to secure your financial future.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#enquiry-form"> <button class="btn btn-gold me-3 mb-3">
                                 <i class="fas fa-credit-card me-2"></i>Buy Now
                             </button></a>
                         <button class="btn mb-3">
-                            <a href="contactus.html" class="speak-to"><i class="fas fa-phone me-2"></i>Speak to an Expert</a>
+                            <a href="contactus.html" style="color: #fff;" class="speak-to"><i class="fas fa-phone me-2"></i>Speak to an Expert</a>
                         </button>
                     </div>
                 </div>
@@ -1182,7 +1196,7 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                        <img src="assets/img/logo/logo.jpg" alt="brand logo">
                                     </a>
                                 </div>
                             </div>
@@ -1239,9 +1253,9 @@
                             <h6 class="widget-title">Follow Us</h6>
                             <div class="widget-body social-link">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><img src="assets/img/x.svg" id="twitter-icon" width="18px" alt="brand logo">  </a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1251,8 +1265,13 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="copyright-text text-center">
+                    <div class="col-6">
+                        <div class="copyright-text text-left">
+                            <p> Powered by <a href="www.aparajayah.com" target="_blank"> Aparajayah Technologies</a></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="copyright-text text-end">
                             <p>&copy; 2025 <b>Chinfingold</b></p>
                         </div>
                     </div>

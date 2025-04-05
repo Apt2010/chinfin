@@ -108,7 +108,7 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             margin-bottom: 20px;
         }
 
@@ -239,7 +239,7 @@
       .faq-accordion .accordion-button:not(.collapsed) {
           background:
               white;
-          color: #D4AF37;
+          color: #6743ef;
           font-size: 18px;
       }
 
@@ -249,7 +249,7 @@
 
       .faq-accordion .accordion-body {
           padding: 20px 25px;
-          background: rgba(212, 175, 55, 0.05);
+          background: #6743ef12;
           font-size: 16px;
       }
 
@@ -260,7 +260,7 @@
           padding: 30px;
           box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
           margin: 50px 0;
-          border-top: 4px solid #D4AF37;
+          border-top: 4px solid #6743ef;
       }
 
       .feedback-form textarea {
@@ -275,7 +275,7 @@
           padding: 30px;
           box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
           margin-bottom: 50px;
-          border-top: 4px solid #D4AF37;
+          border-top: 4px solid #6743ef;
       }
 
       /* Gold Buttons */
@@ -379,7 +379,7 @@
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                    <img src="assets/img/logo/logo.jpg" alt="Brand Logo" class="logo-header">
                                 </a>
                             </div>
                         </div>
@@ -464,7 +464,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                    <img src=" assets/img/logo/logo.jpg" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -636,16 +636,24 @@
                                     required>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <select class="form-select" id="subject" required>
-                                    <option value="" selected disabled>Select enquiry type</option>
-                                    <option value="Gold Purchase">Gold Purchase</option>
-                                    <option value="Gold Loan">Gold Coin Loan</option>
-                                    <option value="Gold Investment">Sell Gold</option>
-                                    <option value="Other">Other</option>
-                                </select>
+							<div class="mb-3">
+							  <label for="subject" class="form-label">Subject</label>
+							  <select class="form-select" id="subject" required onchange="handleSubjectChange()">
+								<option value="" selected disabled>Select enquiry type</option>
+								<option value="Gold Purchase">Gold Purchase</option>
+								<option value="Gold Loan">Gold Coin Loan</option>
+								<option value="Gold Investment">Sell Gold</option>
+								<option value="Other">Customize Gold Coin</option>
+							  </select>
+							</div>
+
+							<div id="sub" style="display: none;">
+                            <div class="col-md-12 d-flex mb-3">
+							  <p class="col-md-6">GST: 10%</p>
+							  <p class="col-md-6">Making Charges: 5%</p>
                             </div>
+							</div
+                            >
 
                             <div class="mb-4">
                                 <label for="message" class="form-label">Your Message</label>
@@ -691,7 +699,7 @@
         <div class="row mt-4">
             <div class="col-lg-8">
                 <!-- Buying Gold FAQ -->
-                <h4 id="buying" class="mt-5 mb-4"><i class="fas fa-coins me-2" style="color: #D4AF37;"></i> Buying Gold
+                <h4 id="buying" class="mt-5 mb-4"><i class="fas fa-coins me-2" style="color: #6742f0;"></i> Buying Gold
                 </h4>
                 <div class="faq-accordion accordion" id="buyingAccordion">
                     <div class="accordion-item">
@@ -730,7 +738,7 @@
                 </div>
 
                 <!-- Selling Gold FAQ -->
-                <h4 id="selling" class="mt-5 mb-4"><i class="fas fa-hand-holding-usd me-2" style="color: #D4AF37;"></i>
+                <h4 id="selling" class="mt-5 mb-4"><i class="fas fa-hand-holding-usd me-2" style="color: #6742f0;"></i>
                     Selling Gold</h4>
                 <div class="faq-accordion accordion" id="sellingAccordion">
                     <div class="accordion-item">
@@ -778,7 +786,7 @@
                 </div>
 
                 <!-- Gold Loans FAQ -->
-                <h4 id="loans" class="mt-5 mb-4"><i class="fas fa-piggy-bank me-2" style="color: #D4AF37;"></i> Gold
+                <h4 id="loans" class="mt-5 mb-4"><i class="fas fa-piggy-bank me-2" style="color: #6742f0;"></i> Gold
                     Loans</h4>
                 <div class="faq-accordion accordion" id="loansAccordion">
                     <div class="accordion-item">
@@ -851,7 +859,7 @@
                                 <option>Buying Gold</option>
                                 <option>Selling Gold</option>
                                 <option>Gold Coin Loans</option>
-                                <option>Other</option>
+                                <option>Customize Gold Coin</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -889,15 +897,15 @@
                 <!-- Contact Info -->
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-headset me-2" style="color: #D4AF37;"></i> Need more
+                        <h5 class="card-title"><i class="fas fa-headset me-2" style="color: #6742f0;"></i> Need more
                             help?</h5>
                         <p class="card-text">Contact our customer support team for immediate assistance.</p>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-phone me-2" style="color: #D4AF37;"></i> +91 98765 43210
+                            <li class="mb-2"><i class="fas fa-phone me-2" style="color: #6742f0;"></i> +91 98765 43210
                             </li>
-                            <li class="mb-2"><i class="fas fa-envelope me-2" style="color: #D4AF37;"></i>
+                            <li class="mb-2"><i class="fas fa-envelope me-2" style="color: #6742f0;"></i>
                                 support@chinfingold.com</li>
-                            <li><i class="fas fa-clock me-2" style="color: #D4AF37;"></i> Mon-Sat: 9AM - 7PM</li>
+                            <li><i class="fas fa-clock me-2" style="color: #6742f0;"></i> Mon-Sat: 9AM - 7PM</li>
                         </ul>
                         <a href="#" class="btn btn-outline-secondary w-100">Live Chat</a>
                     </div>
@@ -980,7 +988,7 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                        <img src="assets/img/logo/logo.jpg" alt="brand logo">
                                     </a>
                                 </div>
                             </div>
@@ -1037,9 +1045,9 @@
                             <h6 class="widget-title">Follow Us</h6>
                             <div class="widget-body social-link">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><img src="assets/img/x.svg" id="twitter-icon" width="18px" alt="brand logo">  </a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1049,8 +1057,13 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="copyright-text text-center">
+                    <div class="col-6">
+                        <div class="copyright-text text-left">
+                            <p> Powered by <a href="www.aparajayah.com" target="_blank"> Aparajayah Technologies</a></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="copyright-text text-end">
                             <p>&copy; 2025 <b>Chinfingold</b></p>
                         </div>
                     </div>
@@ -1060,7 +1073,16 @@
     </footer>
     <!-- footer area end -->
 
+<style>
+    #twitter-icon {
+    fill: #1DA1F2; /* Default Twitter Blue */
+    transition: fill 0.3s ease-in-out;
+}
 
+#twitter-icon:hover {
+    fill: white; /* Changes to white on hover */
+}
+</style>
 
 
     <!-- JS
@@ -1100,7 +1122,20 @@
             alert('Thank you for your enquiry! Our representative will contact you shortly.');
             this.reset();
         });
+		  function handleSubjectChange() {
+			const subjectSelect = document.getElementById("subject");
+			const subDiv = document.getElementById("sub");
+
+			if (subjectSelect.value === "Other") {
+			  subDiv.style.display = "block";
+			} else {
+			  subDiv.style.display = "none";
+			}
+		  }
     </script>
+
+
+
 </body>
 
 </html>
