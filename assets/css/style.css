@@ -1449,8 +1449,7 @@ only screen and (max-width: 767.98px) {
 
 .main-menu ul li:hover>a,
 .main-menu ul li.active>a {
-  color: #6543ed;
-  border-bottom: 2px solid;
+  color: #c29958;
 }
 
 .main-menu ul li ul.dropdown {
@@ -2861,7 +2860,7 @@ only screen and (max-width: 767.98px) {
   display: flex;
   margin-top: 30px;
   margin-bottom: -3px;
-  box-shadow: -4px 0px 0px 1px #6743ef;
+  box-shadow: -4px 0px 0px 1px #c29958;
   background: #fff;
     padding: 20px 13px;
     border-radius: 5px;
@@ -2884,7 +2883,7 @@ only screen and (max-width: 767.98px) {
 .policy-icon {
   font-size: 30px;
   line-height: 1;
-  color: #6743ef;
+  color: #c29958;
   padding-right: 16px;
 }
 
@@ -6873,9 +6872,9 @@ only screen and (max-width: 767.98px) {
   color: #fff;
   display: inline-block;
   text-align: center;
-  background-color: #6743ef;
+  background-color: #c29958;
   border-radius: 50%;
-  border: 1px solid #6743ef;
+  border: 1px solid #c29958;
 }
 
 .social-link a:last-child {
@@ -7105,10 +7104,9 @@ only screen and (max-width: 767.98px) {
   background: white;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: #000000;
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
 }
 
 
@@ -7168,7 +7166,6 @@ only screen and (max-width: 767.98px) {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
-    background-image: url(../img/bg.png);
 }
 
 .gold-coin-banner::before {
@@ -7385,7 +7382,6 @@ font-size: 16px;
   background-color: linear-gradient(135deg, #b7950b 0%, #D4AF37 50%,  #f5d27a 100%);
   color: white;
   padding: 15px;
-  background-image: url(../img/bg.png);
 }
 
 .form-label {
@@ -7503,7 +7499,6 @@ font-size: 16px;
   background: linear-gradient(to right, #bf862e, #D4AF37);
   color: white;
   padding: 20px 30px;
-  background-image: url(../img/bg.png);
 }
 
 .gold-header h3 {
@@ -7515,7 +7510,7 @@ font-size: 16px;
 
 
 .btn-golds {
-  background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
+  background: linear-gradient(to right, #D4AF37, #FFD700);
   color: #000;       
   border: none;
   font-weight: 600;
@@ -7527,7 +7522,6 @@ font-size: 16px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  color: #fff;
   font-weight: 900;
 }
 
@@ -7593,13 +7587,13 @@ font-size: 16px;
 .feature-icon {
   width: 80px;
   height: 80px;
-  background-color: #6742f0;
+  background-color: rgba(212, 175, 55, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 25px;
-  color: #fff;
+  color: #D4AF37;
   font-size: 2rem;
 }
 

@@ -33,7 +33,199 @@
     <link rel="stylesheet" href="assets/css/jqueryui.min.css">
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+        .p {
+            font-size: 15px;
+        }
 
+       .gold-headers {
+            background: url('https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            padding: 60px 0px 20px;
+            position: relative;
+        }
+
+        .gold-headers:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(238 238 238 / 70%);
+        }
+
+             /* Responsive Adjustments */
+             @media (max-width: 768px) {
+            .gold-headers {
+                padding: 80px 0;
+            }
+
+        }
+
+
+        .page-title {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #D4AF37;
+        }
+
+        /* FAQ Search Section */
+        .faq-search {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            border-top: 4px solid #d4af37;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding-left: 50px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            height: 50px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion .accordion-item {
+            border: none;
+            border-radius: 5px !important;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .faq-accordion .accordion-button {
+            background: white;
+            color: #0A0A0A;
+            font-weight: 600;
+            padding: 20px 25px;
+            box-shadow: none !important;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background:
+                white;
+            color: #D4AF37;
+            font-size: 18px;
+        }
+
+        .faq-accordion .accordion-button:after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .faq-accordion .accordion-body {
+            padding: 20px 25px;
+            background: rgba(212, 175, 55, 0.05);
+            font-size: 16px;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            margin: 50px 0;
+            border-top: 4px solid #d4af37;
+        }
+
+        .feedback-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Question Form */
+        .question-form {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            border-top: 4px solid #d4af37;
+        }
+
+        
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .gold-header {
+                padding: 80px 0;
+            }
+
+            .faq-search {
+                margin-top: -30px;
+            }
+        }
+
+
+        .keywords {
+            font-size: 16px;
+        }
+
+        .btn-outline-success {
+            border: 1px solid green;
+            padding: 10px;
+        }
+
+        .btn-outline-danger {
+            border: 1px solid rgb(147, 8, 8);
+            padding: 10px;
+        }
+
+
+        .form-select,
+        .form-control {
+            float: none;
+            width: 100%;
+            background-image: none;
+            border-radius: 10px;
+            border: 1px solid #bababa;
+        }
+
+        .btn-outline-secondary {
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #4f5053;
+            color: white;
+
+        }
+
+        .card-text {
+            font-size: 16px;
+            padding:
+                10px 0px;
+        }
+
+        .list-unstyled ul li {
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,7 +243,7 @@
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.jpg" alt="Brand Logo" class="logo-header">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
                                 </a>
                             </div>
                         </div>
@@ -136,7 +328,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src=" assets/img/logo/logo.jpg" alt="Brand Logo">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -208,8 +400,8 @@
                     <img src="assets/img/front-coin.png" alt="22K Gold Coin" class="img-fluid coin-img">
                 </div>
                 <div class="col-md-8 gl-loan">
-                    <h2 class="fw-bold" style="color: #fff;">Own Gold Coins with Easy EMI Options</h2>
-                    <p class="lead" style="color: #fff;">Own premium gold coins today with easy monthly installments from Chinfin Finance
+                    <h2 class="fw-bold">Own Gold Coins with Easy EMI Options</h2>
+                    <p class="lead">Own premium gold coins today with easy monthly installments from Chinfin Finance
                     </p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
                         <div class="bg-white p-3 rounded text-center flex-grow-1">
@@ -221,7 +413,7 @@
                             <p class="mb-0">Easy Payment Options</p>
                         </div>
                         <div class="bg-white p-3 rounded text-center flex-grow-1">
-                            <h4 class="text-primary-custom">Instant Loan</h4>
+                            <h4 class="text-primary-custom">Instant Financial Support</h4>
                             <p class="mb-0">Against Your Purchase</p>
                         </div>
                     </div>
@@ -246,73 +438,8 @@
 
 
 
-    <!-- Gold Journey Section -->
-    <section class="gold-journey-section">
-        <!-- Decorative gold coins -->
-
-        <div class="container">
-            <div class="col-12">
-                <!-- section title start -->
-                <div class="section-title text-center">
-                    <h2 class="title">Your Gold Journey With Chinfin</h2>
-                    <p class="lead text-muted">A simple story of how your gold works for you</p>
-                </div>
-            </div>
 
 
-            <div class="journey-container">
-                <div class="journey-line"></div>
-
-                <!-- Step 1 -->
-                <div class="journey-step">
-                    <div class="step-number">1</div>
-                    <div class="step-card">
-                        <h3>Start Your Gold Collection</h3>
-                        <p>Begin by purchasing premium 22K gold coins from our certified collection. Whether you're
-                            investing or celebrating a special occasion, we offer the finest quality gold with complete
-                            certification and transparency.</p>
-                        <div class="step-tags">
-                            <span class="step-tag">Certified Purity</span>
-                            <span class="step-tag">Hallmarked</span>
-                            <span class="step-tag">Secure Packaging</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="journey-step">
-                    <div class="step-number">2</div>
-                    <div class="step-card">
-                        <h3>Unlock Instant Liquidity</h3>
-                        <p>When you need funds, your gold becomes your financial partner. Our gold loan facility
-                            provides immediate liquidity against your gold assets at competitive interest rates, without
-                            the need to sell your precious holdings.</p>
-                        <div class="step-tags">
-                            <span class="step-tag">Lowest Rates</span>
-                            <span class="step-tag">Quick Approval</span>
-                            <span class="step-tag">No Credit Check</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="journey-step">
-                    <div class="step-number">3</div>
-                    <div class="step-card">
-                        <h3>Grow & Repeat</h3>
-                        <p>After repaying your loan, your gold is returned to you in perfect condition. You can continue
-                            to hold it for appreciation, use it again for future loans, or add to your collection. Your
-                            gold remains a versatile financial asset.</p>
-                        <div class="step-tags">
-                            <span class="step-tag">Flexible Repayment</span>
-                            <span class="step-tag">Gold Appreciation</span>
-                            <span class="step-tag">Repeat Loans</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -325,7 +452,7 @@
                     <!-- section title start -->
                     <div class="section-title text-center">
                         <h2 class="title">Why Gold With Chinfin?</h2>
-                        <p class="lead text-muted">More than just a loan - a complete gold financial solution</p>
+                        <p class="lead text-muted mt-4">More than just a loan - a complete gold financial solution</p>
                     </div>
                 </div>
             </div>
@@ -338,7 +465,7 @@
                                 <i class="fa fa-gem"></i>
                             </div>
                             <h4>Premium Gold Quality</h4>
-                            <p class="text-muted">We offer only 22K purity gold with proper certification and
+                            <p class="text-muted mt-4">We offer only 22K purity gold with proper certification and
                                 hallmarking for complete peace of mind.</p>
                         </div>
                     </div>
@@ -351,7 +478,7 @@
                                 <i class="fa fa-percentage"></i>
                             </div>
                             <h4>Lowest Interest Rates</h4>
-                            <p class="text-muted">Enjoy the most competitive gold loan rates in the market, starting
+                            <p class="text-muted mt-4">Enjoy the most competitive gold loan rates in the market, starting
                                 from just 0.75% per month.</p>
                         </div>
                     </div>
@@ -364,7 +491,7 @@
                                 <i class="fa fa-shield-alt"></i>
                             </div>
                             <h4>Bank-Grade Security</h4>
-                            <p class="text-muted">Your gold is stored in RBI-approved vaults with 24/7 monitoring and
+                            <p class="text-muted mt-4">Your gold is stored in RBI-approved vaults with 24/7 monitoring and
                                 full insurance coverage.</p>
                         </div>
                     </div>
@@ -377,7 +504,7 @@
                                 <i class="fa fa-bolt"></i>
                             </div>
                             <h4>Instant Disbursement</h4>
-                            <p class="text-muted">Get funds transferred to your account within hours of gold appraisal
+                            <p class="text-muted mt-4">Get funds transferred to your account within hours of gold appraisal
                                 and documentation.</p>
                         </div>
                     </div>
@@ -390,7 +517,7 @@
                                 <i class="fa fa-calendar-alt"></i>
                             </div>
                             <h4>Flexible Tenure</h4>
-                            <p class="text-muted">Choose repayment periods from 3 months to 3 years with customizable
+                            <p class="text-muted mt-4">Choose repayment periods from 3 months to 3 years with customizable
                                 EMI options.</p>
                         </div>
                     </div>
@@ -402,8 +529,8 @@
                             <div class="feature-icon">
                                 <i class="fa fa-hand-holding-usd"></i>
                             </div>
-                            <h4>Highest Valuation</h4>
-                            <p class="text-muted">Get up to 80% of gold's market value as loan amount based on current
+                            <h4>Loan for Gold Coin</h4>
+                            <p class="text-muted mt-4">Get up to 80% of gold's market value as loan amount based on current
                                 rates.</p>
                         </div>
                     </div>
@@ -412,113 +539,168 @@
         </div>
     </section>
 
-
-    <div class="container py-5" id="loan-calculator">
-        <div class="col-12">
-            <!-- section title start -->
-            <div class="section-title text-center">
-                <h2 class="title">Gold Loan Calculator</h2>
-                <p class="lead text-muted">Calculate your loan amount based on gold value and get instant results</p>
+ <div class="container mt-4">
+    <!-- FAQ Header -->
+    <header class="gold-headers">
+        <div class="container position-relative">
+            <div class="col-12">
+                <!-- section title start -->
+                <div class="section-title text-center">
+                    <h2 class="title">Frequently Asked Questions</h2>
+                    <p class="lead text-muted">Find answers to common questions about our gold services</p>
+                </div>
             </div>
         </div>
+    </header>
 
-        <div class="row g-4">
-            <!-- Calculator Form -->
-            <div class="col-lg-6">
-                <div class="calculator-card">
-                    <div class="calculator-header">
-                        <h3 class="mb-0 loan-calc-text"><i class="fas fa-calculator me-2"></i> Loan Calculator</h3>
-                    </div>
-                    <div class="card-body p-4">
-                        <form id="goldLoanForm">
-                            <div class="mb-3">
-                                <label for="goldWeight" class="form-label">Gold Weight (in grams)</label>
-                                <input type="number" class="form-control" id="goldWeight"
-                                    placeholder="Enter gold weight" min="1" step="0.01" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="goldPurity" class="form-label">Gold Purity</label>
-                                <select class="form-select" id="goldPurity" required>
-                                    <option value="22" selected>22K (91.6% pure)</option>
-                                  
-
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Gold Rate (per gram)</label>
-                                <div class="fixed-value">
-                                    ₹<span id="fixedGoldRate">8,250</span> <small class="text-muted">(Company fixed
-                                        rate)</small>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <label class="form-label">Loan Percentage</label>
-                                <div class="fixed-value">
-                                    <span id="fixedLoanPercentage">75</span>% <small class="text-muted">(Company
-                                        policy)</small>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-gold w-100">
-                                <i class="fas fa-calculator me-2"></i> Calculate Loan
+        <!-- FAQ Content -->
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <!-- Buying Gold FAQ -->
+                <h4 id="buying" class="mt-5 mb-4"><i class="fas fa-coins me-2" style="color: #d4af37;"></i> General Questions
+                </h4>
+                <div class="faq-accordion accordion" id="buyingAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="buyingHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#buyingCollapse1" aria-expanded="true" aria-controls="buyingCollapse1">
+                                What is a gold coin loan?
                             </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Results Section -->
-            <div class="col-lg-6">
-                <div class="result-card">
-                    <h3 class="mb-4"><i class="fas fa-chart-line me-2 text-warning"></i> Loan Estimation</h3>
-
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <p class="mb-1">Gold Value</p>
-                            <h3 class="result-value" id="goldValue">₹0</h3>
+                        </h2>
+                        <div id="buyingCollapse1" class="accordion-collapse collapse show"
+                            aria-labelledby="buyingHeading1" data-bs-parent="#buyingAccordion">
+                            <div class="accordion-body">
+                               A gold coin loan is a secured loan where you pledge your gold coins as collateral to receive immediate funds. The loan amount is based on the market value of the gold.
+                            </div>
                         </div>
                     </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <p class="mb-1">Eligible Loan Amount</p>
-                            <h3 class="result-value" id="loanAmount">₹0</h3>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="mb-1">Approx. Monthly Interest*</p>
-                            <h3 class="result-value" id="monthlyInterest">₹0</h3>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <h5 class="mb-3">Company Terms:</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Gold Rate:
-                                    ₹8,250/gram (22K)</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Loan Percentage:
-                                    75% of gold value</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Interest rate:
-                                    12% per annum (1% monthly)</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Processing fees:
-                                    1% of loan amount</li>
-                            </ul>
-                            <div class="alert alert-info mt-3">
-                                <i class="fas fa-info-circle me-2"></i> Rates are fixed by company policy. Actual loan
-                                amount subject to gold appraisal.
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="buyingHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#buyingCollapse2" aria-expanded="false" aria-controls="buyingCollapse2">
+                                Which gold coins are accepted?
+                            </button>
+                        </h2>
+                        <div id="buyingCollapse2" class="accordion-collapse collapse" aria-labelledby="buyingHeading2"
+                            data-bs-parent="#buyingAccordion">
+                            <div class="accordion-body">
+                                We accept:<br>
+                    ✅ Government-minted coins (e.g., Sovereign, Britannia, American Eagle)<br>
+                    ✅ 22K or 24K purity gold coins<br>
+                    ❌ Non-certified or impure coins may not be eligible
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Selling Gold FAQ -->
+                <h4 id="selling" class="mt-5 mb-4"><i class="fas fa-hand-holding-usd me-2" style="color: #d4af37;"></i>
+                    Selling Gold</h4>
+                <div class="faq-accordion accordion" id="sellingAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sellingHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#sellingCollapse1" aria-expanded="true"
+                                aria-controls="sellingCollapse1">
+                                How do you determine the value of my gold?
+                            </button>
+                        </h2>
+                        <div id="sellingCollapse1" class="accordion-collapse collapse show"
+                            aria-labelledby="sellingHeading1" data-bs-parent="#sellingAccordion">
+                            <div class="accordion-body">
+                                We use a three-step process to determine your gold's value:
+                                <ol>
+                                    <li><strong>Weight Measurement:</strong> Precise digital weighing on certified
+                                        scales</li>
+                                    <li><strong>Purity Testing:</strong> XRF spectrometer analysis for accurate purity
+                                        assessment</li>
+                                    <li><strong>Valuation:</strong> Current market price calculation based on weight and
+                                        purity</li>
+                                </ol>
+                                We offer 5% above market rate for all gold items.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="sellingHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#sellingCollapse2" aria-expanded="false"
+                                aria-controls="sellingCollapse2">
+                                Do you buy damaged or broken jewelry?
+                            </button>
+                        </h2>
+                        <div id="sellingCollapse2" class="accordion-collapse collapse" aria-labelledby="sellingHeading2"
+                            data-bs-parent="#sellingAccordion">
+                            <div class="accordion-body">
+                                Yes, we purchase damaged or broken gold jewelry at the same rate as intact pieces. Since
+                                we value gold based on its weight and purity, the condition of the jewelry doesn't
+                                affect its value. In fact, we encourage customers to sell damaged pieces they no longer
+                                wear rather than letting them sit unused.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Loans FAQ -->
+                <h4 id="loans" class="mt-5 mb-4"><i class="fas fa-piggy-bank me-2" style="color: #d4af37;"></i> Gold
+                    Loans</h4>
+                <div class="faq-accordion accordion" id="loansAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="loansHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#loansCollapse1" aria-expanded="true" aria-controls="loansCollapse1">
+                                Who provides the loan for purchasing gold coins?
+                            </button>
+                        </h2>
+                        <div id="loansCollapse1" class="accordion-collapse collapse show"
+                            aria-labelledby="loansHeading1" data-bs-parent="#loansAccordion">
+                            <div class="accordion-body">
+                                The loan amount is sanctioned by Chimaya Finance, our trusted financial partner. Chinfin facilitates the loan process to ensure a seamless experience for customers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="loansHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#loansCollapse2" aria-expanded="false" aria-controls="loansCollapse2">
+                                What are the eligibility criteria for the loan?
+                            </button>
+                        </h2>
+                        <div id="loansCollapse2" class="accordion-collapse collapse" aria-labelledby="loansHeading2"
+                            data-bs-parent="#loansAccordion">
+                            <div class="accordion-body">
+                                You can get a loan by providing valid identity proof and a witness signature. Chimaya Finance will verify the documents before approving the loan.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="loansHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#loansCollapse3" aria-expanded="false" aria-controls="loansCollapse3">
+                                How quickly can I get a gold loan?
+                            </button>
+                        </h2>
+                        <div id="loansCollapse3" class="accordion-collapse collapse" aria-labelledby="loansHeading3"
+                            data-bs-parent="#loansAccordion">
+                            <div class="accordion-body">
+                                Our gold loan approval process is exceptionally fast:
+                                <ul>
+                                    <li><strong>In-person:</strong> 30 minutes (including valuation)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask a Question Form -->
+               
             </div>
+
+            
         </div>
     </div>
-
 
 
 
@@ -662,7 +844,7 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo.jpg" alt="brand logo">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
                                     </a>
                                 </div>
                             </div>
@@ -839,7 +1021,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: #6742f0;
+            background: #D4AF37;
             transform: translateX(-50%);
             z-index: 1;
         }
@@ -854,7 +1036,7 @@
         .step-number {
             width: 80px;
             height: 80px;
-            background: #6742f0;
+            background: #D4AF37;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -864,7 +1046,7 @@
             font-weight: 700;
             flex-shrink: 0;
             margin: 0 30px;
-            box-shadow: 0 10px 20px #6742f0;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
             position: relative;
             border: 5px solid white;
         }
@@ -892,7 +1074,7 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: #6742f0;
+            background: #D4AF37;
         }
 
         .step-card h3 {
@@ -915,19 +1097,19 @@
         }
 
         .step-tag {
-            background: rgb(103 66 240 / 10%);
-            color: #6742f0;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgb(103 66 240 / 10%);
+            background: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
 
         .feature-icon {
             font-size: 2.5rem;
-            color: #fff;
+            color: #D4AF37;
             margin-bottom: 1rem;
         }
 

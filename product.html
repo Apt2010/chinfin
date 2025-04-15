@@ -52,7 +52,6 @@
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
             padding: 4rem 0;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            background-image: url("./assets/img/bg.png");
         }
 
         .coin-display {
@@ -106,7 +105,7 @@
 
         .specs-card {
             /* border-left: 4px solid var(--gold-primary); */
-            border-left: 4px solid #6743ee;
+            border-left: 4px solid #d4af37;
             transition: transform 0.3s;
         }
 
@@ -129,21 +128,18 @@
 
         .benefit-icon {
             font-size: 2.5rem;
-            /* color: var(--gold-primary); */
-            color: #6743ef;
+           color: var(--gold-primary);
             margin-bottom: 1rem;
         }
 
         .cta-section {
-           background: linear-gradient(299deg, #7c4fd4 0%, rgb(114 62 159) 100%) ;
-              /*background-color: #6743ef;*/
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
             padding: 4rem 0;
-            background-image: url(./assets/img/sb1.png);
 
         }
 
         .btn-gold {
-            background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
+            background: linear-gradient(to right, var(--gold-primary), var(--gold-secondary));
             color: white;
             border: none;
             font-size: 17px;
@@ -359,10 +355,9 @@
         }
 
         .gold-header {
-            /* background: linear-gradient(to right, #bf862e, var(--gold-primary)); */
+            background: linear-gradient(to right, #bf862e, var(--gold-primary)); 
             color: white;
             padding: 20px 30px;
-            background: #6743ef;
             
         }
 
@@ -435,8 +430,7 @@
             top: 50%;
             transform: translateY(-50%);
             left: 15px;
-            color: #6743ef;
-            /* color: var(--gold-primary); */
+            color: var(--gold-primary); 
         }
 
         .form-group {
@@ -539,7 +533,7 @@
         }
 #addMoreBtn{
     text-align: left;
-    background: linear-gradient(135deg, #FFD700, #FFC107, #FFB300);
+    background: linear-gradient(to right, #D4AF37, #FFD700);
     width: 190px;
     padding: 20px;
     border-radius: 50px;
@@ -568,7 +562,7 @@
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.jpg" alt="Brand Logo" class="logo-header">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
                                 </a>
                             </div>
                         </div>
@@ -653,7 +647,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src=" assets/img/logo/logo.jpg" alt="Brand Logo">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -723,8 +717,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
 
-                    <h1 class="display-4 fw-bold mb-4 title-color" style="color: #fff;">22K Pure Gold Coins</h1>
-                    <p class="lead mb-4 fw-semibold" style="color: #fff;">A masterpiece of craftsmanship and purity. Each Coins is minted with precision and carries the legacy of golden heritage.</p>
+                    <h1 class="display-4 fw-bold mb-4 title-color"   >22K Pure Gold Coins</h1>
+                    <p class="lead mb-4 fw-semibold"   >A masterpiece of craftsmanship and purity. Each Coins is minted with precision and carries the legacy of golden heritage.</p>
 
                     <a href="#enquiry-form"><button class="btn btn-gold me-3 mb-3">
                             <i class="fas fa-shopping-cart me-2"></i> Purchase Coins Now </button></a>
@@ -756,55 +750,6 @@
     </section>
 
     
-
-
-
-    <section class="gold-coin-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-6 mb-4 mb-md-0 c-1">
-                    <div class="col-lg-6">
-                        <div class="coin-display">
-                          <!--   <div class="limited-badge"> Chinfin Hallmark Certified</div> -->
-                            <div class="coin">
-                                <div class="coin-front">
-                                    <div class="coin-design">
-                                        <img src="assets/img/front-coin.png" alt="front-coin"/>
-    
-                                    </div>
-                                </div>
-                                <div class="coin-back">
-                                    <div class="coin-design">
-                                        <img src="assets/img/back-coin.png" alt="front-coin"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flip-btn" onclick="document.querySelector('.coin').classList.toggle('flipped')">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-6 section-title ">
-                    <h2 class="title">The Pride of 22K Chinfin Gold Coins</h2>
-                    <p class="content-text">
-                        Our 22K Chinfin Gold Coins represents the pinnacle of craftsmanship and purity.
-                        Each Coins is meticulously minted with the finest 91.67% pure gold, blending
-                        traditional techniques with modern precision to create a timeless treasure.
-                    </p>
-                    <ul class="feature-list">
-                        <li>91.67% pure gold (22 karat)</li>
-                        <li>Exquisite craftsmanship with intricate detailing</li>
-                        <li>Individually numbered for authenticity</li>
-                        <li>Comes with Chinfin Hallmark Certified</li>
-                        <li>Excellent store of value and heritage piece</li>
-                    </ul>
-                    <a href="#enquiry-form"> <button class="btn btn-gold mt-3">Purchase Coins Now</button></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 <!-- Specifications Section -->
 <section class="py-5">
     <div class="container">
@@ -879,6 +824,55 @@
 </section>
 
 
+
+    <section class="gold-coin-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0 c-1">
+                    <div class="col-lg-6">
+                        <div class="coin-display">
+                          <!--   <div class="limited-badge"> Chinfin Hallmark Certified</div> -->
+                            <div class="coin">
+                                <div class="coin-front">
+                                    <div class="coin-design">
+                                        <img src="assets/img/front-coin.png" alt="front-coin"/>
+    
+                                    </div>
+                                </div>
+                                <div class="coin-back">
+                                    <div class="coin-design">
+                                        <img src="assets/img/back-coin.png" alt="front-coin"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-btn" onclick="document.querySelector('.coin').classList.toggle('flipped')">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 section-title ">
+                    <h2 class="title">The Pride of 22K Chinfin Gold Coins</h2>
+                    <p class="content-text">
+                        Our 22K Chinfin Gold Coins represents the pinnacle of craftsmanship and purity.
+                        Each Coins is meticulously minted with the finest 91.67% pure gold, blending
+                        traditional techniques with modern precision to create a timeless treasure.
+                    </p>
+                    <ul class="feature-list">
+                        <li>91.67% pure gold (22 karat)</li>
+                        <li>Exquisite craftsmanship with intricate detailing</li>
+                        <li>Individually numbered for authenticity</li>
+                        <li>Comes with Chinfin Hallmark Certified</li>
+                        <li>Excellent store of value and heritage piece</li>
+                    </ul>
+                    <a href="#enquiry-form"> <button class="btn btn-gold mt-3">Purchase Coins Now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Benefits Section -->
     <section class="py-5 bg-light">
         <div class="container">
@@ -949,15 +943,15 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
-                    <h2 class="fw-bold mb-3" style="color: #fff;">Ready to Own a Piece of Lasting Value?</h2>
-                    <p class="lead mb-4" style="color: #fff;">Each Coins is a tangible asset that can be passed down through generations.
+                    <h2 class="fw-bold mb-3"   >Ready to Own a Piece of Lasting Value?</h2>
+                    <p class="lead mb-4"   >Each Coins is a tangible asset that can be passed down through generations.
                         Don't miss this opportunity to secure your financial future.</p>
                     <div class="d-flex flex-wrap">
                         <a href="#enquiry-form"> <button class="btn btn-gold me-3 mb-3">
                                 <i class="fas fa-credit-card me-2"></i>Buy Now
                             </button></a>
                         <button class="btn mb-3">
-                            <a href="contactus.html" style="color: #fff;" class="speak-to"><i class="fas fa-phone me-2"></i>Speak to an Expert</a>
+                            <a href="contactus.html"    class="speak-to"><i class="fas fa-phone me-2"></i>Speak to an Expert</a>
                         </button>
                     </div>
                 </div>
@@ -1196,7 +1190,7 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo.jpg" alt="brand logo">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
                                     </a>
                                 </div>
                             </div>
