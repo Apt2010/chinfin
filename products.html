@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Chinfin Gold </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/fav-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Pe-icon-7-stroke CSS -->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="assets/css/jqueryui.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+     
+       .split-screen {
+            display: flex;
+            height: 100vh;
+            position: relative;
+        }
+        
+        /* Left Side - Gold Coins */
+        .left-side {
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('assets/img/front-back.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f5f5f5;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        /* Right Side - Jewelry */
+        .right-side {
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('assets/img/jewellery/product-gold-earings.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f5f5f5;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .side-content {
+            text-align: center;
+            padding: 20px;
+            z-index: 2;
+            max-width: 80%;
+            transition: transform 0.5s ease;
+              background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        
+        .side-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #D4AF37;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            font-weight: 700;
+        }
+        
+        .side-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .explore-btn {
+            background: transparent;
+            color: #f5f5f5;
+            border: 2px solid #D4AF37;
+            padding: 12px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .explore-btn:hover {
+            background: #D4AF37;
+            color: var(--dark-bg);
+        }
+        
+        .explore-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #D4AF37;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .explore-btn:hover::before {
+            left: 0;
+        }
+        
+        /* Hover Effects */
+        .left-side:hover, .right-side:hover {
+            flex: 1.5;
+        }
+        
+        .left-side:hover .side-content {
+            transform: translateX(20px);
+        }
+        
+        .right-side:hover .side-content {
+            transform: translateX(-20px);
+        }
+        
+        /* Overlay */
+        .side-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4); 
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+        
+        .left-side:hover .side-overlay {
+             background: none; 
+        }
+        
+        .right-side:hover .side-overlay {
+           background: none; 
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .split-screen {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .side-title {
+                font-size: 2.5rem;
+            }
+            
+            .side-description {
+                font-size: 1rem;
+            }
+            
+            .left-side, .right-side {
+                height: 50vh;
+                flex: none;
+            }
+            
+            .left-side:hover, .right-side:hover {
+                flex: none;
+                height: 55vh;
+            }
+            
+            .left-side:hover .side-content, 
+            .right-side:hover .side-content {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .side-title {
+                font-size: 2rem;
+            }
+            
+            .explore-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+        <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-7 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="position-static"><a href="about.html">About Us</a>
+                                            </li>
+                                            <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="goldloan.html">Loan Assist</a>
+                                                    </li>
+                                                    <li><a href="sellgold.html">Sell Gold</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="products.html">Products <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="product.html">Buy 22k Gold coin</a>
+                                                    </li>
+                                                    <li><a href="gold-jewellery.html">22k Gold jewellery</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="location.html">Location</a>
+                                            </li>
+                                            <li><a href="contactus.html">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start 
+                        <div class="col-lg-2">
+                            <div
+                                class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="minicart-btn">
+                                                <i class="pe-7s-shopbag"></i>
+                                                <div class="notification">2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                        <div class="col-lg-3 text-right">
+                            <div class="header-top-settings">
+                                <ul class="nav align-items-center justify-content-end">
+                                    <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
+                                                style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
+                                                class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
+                                            ₹9000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <button class="mobile-menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+        <!-- mobile header end -->
+
+        <!-- offcanvas mobile menu start -->
+        <!-- off-canvas menu start -->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-overlay"></div>
+            <div class="off-canvas-inner-content">
+                <div class="btn-close-off-canvas">
+                    <i class="pe-7s-close"></i>
+                </div>
+
+                <div class="off-canvas-inner">
+
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children "><a href="#">Our Services</a>
+                                    <ul class="dropdown">
+                                        <li class="menu-item-has-children"><a href="goldloan.html">Loan Assist</a> </li>
+                                        <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children "><a href="product.html">Buy 22k Gold Coins</a> </li>
+                                <li><a href="location.html">Location</a>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mobile menu navigation end -->
+                    </div>
+                    <!-- mobile menu end -->
+
+
+
+                </div>
+            </div>
+        </aside>
+        <!-- off-canvas menu end -->
+        <!-- offcanvas mobile menu end -->
+    </header>
+    <!-- end Header Area -->
+
+
+  
+    <div class="split-screen">
+        <!-- Left Side - Gold Coins -->
+        <div class="left-side" onclick="window.location.href='product.html'">
+            <div class="side-overlay"></div>
+            <div class="side-content">
+                <h2 class="side-title">Gold Coins</h2>
+                <p class="side-description">We offer a wide variety of gold coins suitable for investment, gifting, and
+ceremonial purposes.</p>
+                <button class="explore-btn">Buy 22k Gold Coins</button>
+            </div>
+        </div>
+        
+        <!-- Right Side - Jewelry -->
+        <div class="right-side" onclick="window.location.href='gold-jewellery.html'">
+            <div class="side-overlay"></div>
+            <div class="side-content">
+                <h2 class="side-title">Lightweight Jewellery</h2>
+                <p class="side-description">Discover our exclusive collection of lightweight gold jewellery — perfect for everyday wear, gifts,
+and subtle elegance.</p>
+                <button class="explore-btn">Buy arguments </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+    <footer class="footer-widget-area">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <div class="widget-title">
+                                <div class="widget-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>We are a team of designers and developers that create high quality wordpress,
+                                    shopify, Opencart </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Contact Us</h6>
+                            <div class="widget-body">
+                                <address class="contact-block">
+                                    <ul>
+                                        <li><i class="pe-7s-home"></i>
+                                            No.32, Pazhaninathan Complex, Reserve Line, Aathikulam Main Road, Madurai,
+                                            Tamil Nadu 625007</li>
+                                        <li><i class="pe-7s-mail"></i> <a
+                                                href="mailto:demo@plazathemes.com">support@chinfingold.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">0452 4230855</a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Information</h6>
+                            <div class="widget-body">
+                                <ul class="info-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="goldloan.html">Loan Assist</a></li>
+
+                                    <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                    <li><a href="sellgold.html">Sell Gold</a></li>
+
+                                    <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                        <li><a href="products.html">Products <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="product.html">Buy 22k Gold coin</a>
+                                                    </li>
+                                                    <li><a href="gold-jewellery.html">22k Gold jewellery</a>
+                                                    </li>
+                                                </ul>
+                                            </li></li>
+
+
+                                    <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                                    <li><a href="contactus.html">contact Us</a></li>
+                                    <li><a href="location.html"> Locations</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Follow Us</h6>
+                            <div class="widget-body social-link">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><img src="assets/img/x.svg" id="twitter-icon" width="18px" alt="brand logo">
+                                </a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="copyright-text text-left">
+                            <p> Powered by <a href="www.aparajayah.com" target="_blank"> Aparajayah Technologies</a></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="copyright-text text-end">
+                            <p>&copy; 2025 <b>Chinfingold</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- slick Slider JS -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="assets/js/countdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- jquery UI JS -->
+    <script src="assets/js/jqueryui.min.js"></script>
+    <!-- Image zoom JS -->
+    <script src="assets/js/image-zoom.min.js"></script>
+    <!-- Images loaded JS -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- mail-chimp active js -->
+    <script src="assets/js/ajaxchimp.js"></script>
+    <!-- contact form dynamic js -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="assets/js/google-map.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+          // Add smooth hover effects
+        document.querySelectorAll('.left-side, .right-side').forEach(side => {
+            side.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 768) {
+                    if (side.classList.contains('left-side')) {
+                        document.querySelector('.right-side').style.filter = 'brightness(0.7)';
+                    } else {
+                        document.querySelector('.left-side').style.filter = 'brightness(0.7)';
+                    }
+                }
+            });
+            
+            side.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 768) {
+                    document.querySelector('.left-side').style.filter = 'brightness(1)';
+                    document.querySelector('.right-side').style.filter = 'brightness(1)';
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

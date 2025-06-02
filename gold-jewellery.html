@@ -1,0 +1,1398 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Chinfin Gold </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/fav-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Pe-icon-7-stroke CSS -->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="assets/css/jqueryui.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-secondary: #FFD700;
+            --gold-dark: #996515;
+            --gold-light: #F5E6B3;
+            --gold-bg: #FFFDF5;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            background-size: cover;
+            padding: 4rem 0;
+            color: #a18119;
+            position: relative;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            background: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+        }
+
+        .gold-badge {
+            background-color: var(--gold-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .benefit-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            background: white;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .category-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            position: relative;
+        }
+
+        .category-card img {
+            transition: transform 0.5s;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .hallmark-section {
+            background: linear-gradient(135deg, var(--gold-light), white);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .hallmark-icon {
+            font-size: 3rem;
+            color: var(--gold-primary);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-primary);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+            color: white;
+        }
+
+        .footer {
+            background: #222;
+            color: #ddd;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--gold-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .gold-text {
+            color: var(--gold-primary);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 0.75rem 2rem;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+            color: white;
+        }
+
+
+
+
+
+
+
+
+        .category-section {
+            padding: 5rem 0;
+            background-color: var(--gold-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--gold-primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            position: relative;
+            background: white;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .category-card:hover .category-img {
+            transform: scale(1.1);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold-primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .category-content {
+            padding: 25px;
+            position: relative;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .category-stats {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-explore {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+            border: none;
+            color: white;
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-explore:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            color: white;
+        }
+
+        .view-all-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .view-all-btn a {
+            background: transparent;
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+            padding: 12px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .view-all-btn a:hover {
+            background: var(--gold-primary);
+            color: white;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .category-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .category-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .category-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .category-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+
+        .hal-res {
+            padding-left: 90px;
+        }
+
+        .res-image {
+            width: 70%;
+        }
+
+        .res-text {
+            padding-bottom: 30px;
+            font-size: 30px;
+        }
+
+
+
+
+
+
+
+
+    /* Modern Showcase Styles */
+    .modern-product-showcase {
+        padding: 4rem 0;
+        background-color: #ffffff;
+    }
+    
+
+
+    
+    .product-showcase-wrapper {
+        padding: 4rem 0;
+        margin: 2rem 0;
+        position: relative;
+    }
+    
+    .earrings-bg {
+        background: linear-gradient(-90deg, rgba(248,240,227,0.7) 00%, rgba(255,255,255,1) 60%);
+    }
+    
+    .pendants-bg {
+        background: linear-gradient(-270deg, rgba(248,240,227,0.7) 0%, rgba(255,255,255,1) 60%);
+    }
+    
+    .rings-bg {
+        background: linear-gradient(-90deg, rgba(248,240,227,0.7) 00%, rgba(255,255,255,1) 60%);
+    }
+    
+    .bracelets-bg {
+        background: linear-gradient(-270deg, rgba(248,240,227,0.7) 0%, rgba(255,255,255,1) 60%);
+    }
+    
+    .product-image-wrapper {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .product-image {
+        max-height: 400px;
+        width: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+        transition: transform 0.5s ease;
+    }
+    
+    .product-image:hover {
+        transform: scale(1.05);
+    }
+    
+    .product-content-right {
+            background: white;
+    padding: 60px;
+    margin-right: 40px;
+    border-radius: 40px;
+    }
+
+       .product-content-left {
+            background: white;
+    padding: 60px;
+    margin-left: 40px;
+    border-radius: 40px;
+    }
+
+    
+    .product-badge {
+        display: inline-block;
+        padding: 6px 15px;
+        background-color: #d4af37;
+        color: white;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .product-title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+    
+    .product-highlights {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .highlight-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .highlight-value {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #d4af37;
+    }
+    
+    .highlight-label {
+        font-size: 0.8rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .product-description {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+        font-weight: 400;
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .btn-enquire {
+        background-color: #d4af37;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border: 1px solid #d4af37;
+    }
+    
+    .btn-enquire:hover {
+        background-color: transparent;
+        color: #d4af37;
+        transform: translateY(-2px);
+    }
+    
+    .btn-whatsapp, .btn-call, 
+    .btn-catalog, .btn-visit {
+        background-color: white;
+        color: #333;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    .btn-whatsapp:hover, .btn-call:hover, 
+    .btn-catalog:hover, .btn-visit:hover {
+        background-color: #f5f5f5;
+        transform: translateY(-2px);
+    }
+    
+    .bi-whatsapp {
+        color: #25D366;
+    }
+    
+    .bi-telephone {
+        color: #d4af37;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+        .product-content {
+            padding: 0 2rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .product-showcase-wrapper {
+            padding: 3rem 0;
+        }
+        
+        .product-image {
+            max-height: 350px;
+        }
+        
+        .product-highlights {
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .product-showcase-wrapper {
+            padding: 2rem 0;
+            background: linear-gradient(180deg, rgba(248,240,227,0.3) 0%, rgba(255,255,255,1) 50%) !important;
+        }
+        
+        .product-image-wrapper {
+            padding: 1rem;
+        }
+        
+        .product-content {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .product-highlights {
+            justify-content: center;
+        }
+        
+        .product-description {
+            max-width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .action-buttons {
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .product-title {
+            font-size: 1.8rem;
+        }
+        
+        .product-highlights {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .highlight-item {
+            flex: 1 0 40%;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .btn-enquire, .btn-whatsapp, 
+        .btn-call, .btn-catalog, .btn-visit {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-gold.png" alt="Brand Logo" class="logo-header">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-7 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a>
+                                            </li>
+                                            <li class="position-static"><a href="about.html">About Us</a>
+                                            </li>
+                                            <li><a href="#">Our Services <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="goldloan.html">Loan Assist</a>
+                                                    </li>
+                                                    <li><a href="sellgold.html">Sell Gold</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                          <li class="active"><a href="products.html">Products <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="product.html">Buy 22k Gold coin</a>
+                                                    </li>
+                                                    <li><a href="gold-jewellery.html">22k Gold jewellery</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            </li>
+                                            <li><a href="location.html">Location</a>
+                                            </li>
+                                            <li><a href="contactus.html">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start 
+                        <div class="col-lg-2">
+                            <div
+                                class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end float-md-end">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <li>
+                                            <a href="#" class="minicart-btn">
+                                                <i class="pe-7s-shopbag"></i>
+                                                <div class="notification">2</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                        <div class="col-lg-3 text-right">
+                            <div class="header-top-settings">
+                                <ul class="nav align-items-center justify-content-end">
+                                    <li class="curreny-wrap"> Live Gold Price : <span><i class="fa fa-circle"
+                                                style="color: #ff4747;padding: 5px;"></i> 22K- ₹8250</span> <span><i
+                                                class="fa fa-circle" style="color: #ff4747; padding: 5px;"></i> 24k-
+                                            ₹9000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img src=" assets/img/logo/logo-gold.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-toggler">
+                                <button class="mobile-menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+        </div>
+        <!-- mobile header end -->
+        <!-- mobile header end -->
+
+        <!-- offcanvas mobile menu start -->
+        <!-- off-canvas menu start -->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-overlay"></div>
+            <div class="off-canvas-inner-content">
+                <div class="btn-close-off-canvas">
+                    <i class="pe-7s-close"></i>
+                </div>
+
+                <div class="off-canvas-inner">
+
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children"><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children "><a href="#">Our Services</a>
+                                    <ul class="dropdown">
+                                        <li class="menu-item-has-children"><a href="goldloan.html">Loan Assist</a> </li>
+                                        <li class="menu-item-has-children"><a href="sellgold.html">Sell Gold</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children "><a href="product.html">Buy 22k Gold Coins</a> </li>
+                                <li><a href="location.html">Location</a>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mobile menu navigation end -->
+                    </div>
+                    <!-- mobile menu end -->
+
+
+
+                </div>
+            </div>
+        </aside>
+        <!-- off-canvas menu end -->
+        <!-- offcanvas mobile menu end -->
+    </header>
+    <!-- end Header Area -->
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <span class="hero-tagline mb-3">✨ Elegant • Affordable • More designs ✨</span>
+            <h1 class="display-4 fw-bold">Lightweight Gold jewellery Collection</h1>
+            <p class="lead mb-5">Discover our exclusive collection of lightweight gold jewellery — perfect for everyday
+                wear, gifts, and subtle elegance.</p>
+            <a href="#collections" class="btn btn-gold btn-lg px-5 py-3 rounded-pill">Explore Collections</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+<section class="modern-product-showcase">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2 class="title">Our Product Categories</h2>
+         <!--    <p class="section-subtitle">Contemporary designs for the modern connoisseur</p> -->
+        </div>
+
+        <!-- Earrings Showcase -->
+        <div class="product-showcase-wrapper earrings-bg">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="product-image-wrapper">
+                        <img src="assets/img/jewellery/gold-earing.png" alt="Gold Earrings" class="product-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-content-right">
+                        <h3 class="product-title">Ethereal Gold Earrings</h3>
+                        <div class="product-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-value">18K & 22K</span>
+                                <span class="highlight-label">Pure Gold</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">0.5-5g</span>
+                                <span class="highlight-label">Lightweight</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">30+</span>
+                                <span class="highlight-label">Designs</span>
+                            </div>
+                        </div>
+                        <p class="product-description">
+                            Our signature collection of handcrafted earrings blends minimalist aesthetics with 
+                            traditional goldsmith techniques. Each piece is designed for all-day comfort without 
+                            compromising on elegance.
+                        </p>
+                        <div class="action-buttons">
+                            <a href="contactus.html" class="btn-gold me-3 mb-3">Enquire Now</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chains & Pendants Showcase -->
+        <div class="product-showcase-wrapper pendants-bg">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="product-image-wrapper">
+                     <img src="assets/img/jewellery/gold-ring.png" alt="Gold Rings" class="product-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-content-left">
+                        <h3 class="product-title"> Lightweight Gold Rings</h3>
+
+                            <div class="product-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-value">3-12</span>
+                                <span class="highlight-label">Sizes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">18K-22K</span>
+                                <span class="highlight-label">Options</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">Gold</span>
+                                <span class="highlight-label">Accents</span>
+                            </div>
+                        </div>
+
+                
+                        <p class="product-description">
+                               From delicate bands to statement designs, our rings collection celebrates craftsmanship 
+                            and personal expression. Each piece is weighted for comfort and finished to perfection.
+                        </p>
+                        <div class="action-buttons">
+                            <a href="contactus.html" class=" btn-gold me-3 mb-3">Enquire Now</a>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rings Showcase -->
+        <div class="product-showcase-wrapper rings-bg">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="product-image-wrapper">
+                          <img src="assets/img/jewellery/gold-neckles.png" alt="Gold Chains & Pendants" class="product-image">
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-content-right">
+                        <h3 class="product-title">Signature Chains & Pendants </h3>
+                               
+                        <div class="product-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-value">16"-24"</span>
+                                <span class="highlight-label">Adjustable</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">1-15g</span>
+                                <span class="highlight-label">Gold Weight</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">Custom</span>
+                                <span class="highlight-label">Engravings</span>
+                            </div>
+                        </div>
+                        <p class="product-description">
+                         
+                            Contemporary chain designs with meaningful pendants. Our collection offers versatile 
+                            pieces that transition seamlessly from day to evening wear, with secure clasps and 
+                            premium finishes.
+                        </p>
+                        <div class="action-buttons">
+                            <a href="contactus.html" class=" btn-gold me-3 mb-3">Enquire Now</a>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bracelets Showcase -->
+        <div class="product-showcase-wrapper bracelets-bg">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="product-image-wrapper">
+                        <img src="assets/img/jewellery/gold-bracelet.png" alt="Gold Bracelets" class="product-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-content-left">
+                        <h3 class="product-title">Artisan Gold Bracelets</h3>
+                        <div class="product-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-value">6"-8.5"</span>
+                                <span class="highlight-label">Lengths</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">3-20g</span>
+                                <span class="highlight-label">Weight Range</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">4</span>
+                                <span class="highlight-label">Clasp Types</span>
+                            </div>
+                        </div>
+                        <p class="product-description">
+                            Sophisticated wristwear designed for modern lifestyles. Our bracelets combine fluid 
+                            movement with structural integrity, creating pieces that are both durable and 
+                            visually striking.
+                        </p>
+                        <div class="action-buttons">
+                            <a href="contactus.html" class=" btn-gold me-3 mb-3">Enquire Now</a>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="benefit-card text-center p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>BIS Hallmarked</h4>
+                        <p>All pieces certified for purity with HUID representation</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Easy EMI</h4>
+                        <p>Flexible payment options available for all budgets</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h4>Fixed Gold Rate</h4>
+                        <p>No hidden charges, transparent pricing</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Cash Purchase</h4>
+                        <p>Instant ownership with cash transactions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <!-- Hallmark Section -->
+    <section id="hallmark" class="py-5">
+        <div class="container">
+            <div class="hallmark-section">
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-center">
+                        <i class="fas fa-certificate hallmark-icon mb-4"></i>
+                        <h3 class="fw-bold gold-text">BIS Hallmarked 22K Gold</h3>
+                        <p class="lead">Assured Purity with HUID Representation</p>
+                        <img src="assets/img/jewellery/earings-one.png" alt="BIS Hallmark"
+                            class="img-fluid mt-3 res-image">
+                    </div>
+                    <div class="col-md-7 hal-res">
+                        <h4 class="fw-bold mb-3 res-text">Why Hallmarking Matters?</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> <strong>91.67% Pure
+                                    Gold</strong> - Certified 22K purity (916 hallmark)</li>
+                            <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> <strong>Government
+                                    Verified</strong> - Bureau of Indian Standards certification</li>
+                            <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> <strong>HUID
+                                    Number</strong> - Unique identification for each piece</li>
+                            <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> <strong>Assay Center
+                                    Mark</strong> - Tested at certified centers</li>
+                            <li class="mb-3"><i class="fas fa-check-circle gold-text me-2"></i> <strong>Jeweler's
+                                    Identification</strong> - Manufacturer details</li>
+                        </ul>
+                        <div class="alert alert-warning mt-4">
+                            <i class="fas fa-exclamation-circle me-2"></i> All our jewellery comes with proper hallmarking
+                            and certification for your peace of mind.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials 
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold gold-text">What Our Customers Say</h2>
+                <p class="lead">Trusted by thousands of satisfied customers</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Priya Sharma</h5>
+                                <div class="gold-text">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The lightweight earrings are perfect for daily wear. I've received so many compliments and they're so comfortable!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Rahul Patel</h5>
+                                <div class="gold-text">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Bought a chain for my wife's anniversary. The quality is exceptional and the hallmark gives me confidence in the purchase."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Ananya Reddy</h5>
+                                <div class="gold-text">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The EMI option made it easy to buy the bracelet I wanted. Customer service was excellent throughout the process."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+
+           <!-- service policy area start -->
+        <div class="service-policy section-padding">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-sm-6 col-lg-3 promise">
+                        <div class="policy-item">
+                            <div class="policy-icon">
+                                <i class="pe-7s-safe"></i>
+                            </div>
+                            <div class="policy-content">
+                                <h6>100% Authentic & Certified</h6>
+                                <p>Guaranteed purity and trust</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 promise">
+                        <div class="policy-item">
+                            <div class="policy-icon">
+                                <i class="pe-7s-piggy"></i>
+                            </div>
+                            <div class="policy-content">
+                                <h6>Great Investment</h6>
+                                <p>Secure your wealth with lasting value</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 promise">
+                        <div class="policy-item">
+                            <div class="policy-icon">
+                                <i class="pe-7s-gift"></i>
+                            </div>
+                            <div class="policy-content">
+                                <h6>Perfect Gift Choice</h6>
+                                <p>A timeless and meaningful present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 promise">
+                        <div class="policy-item">
+                            <div class="policy-icon">
+                                <i class="pe-7s-medal"></i>
+                            </div>
+                            <div class="policy-content">
+                                <h6>Compact & Valuable</h6>
+                                <p>Small in size, big in worth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service policy area end -->
+
+
+    <!-- footer area start -->
+    <footer class="footer-widget-area">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <div class="widget-title">
+                                <div class="widget-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/logo-gold.png" alt="brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>We are a team of designers and developers that create high quality wordpress,
+                                    shopify, Opencart </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Contact Us</h6>
+                            <div class="widget-body">
+                                <address class="contact-block">
+                                    <ul>
+                                        <li><i class="pe-7s-home"></i>
+                                            No.32, Pazhaninathan Complex, Reserve Line, Aathikulam Main Road, Madurai,
+                                            Tamil Nadu 625007</li>
+                                        <li><i class="pe-7s-mail"></i> <a
+                                                href="mailto:demo@plazathemes.com">support@chinfingold.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">0452 4230855</a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Information</h6>
+                            <div class="widget-body">
+                                <ul class="info-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="goldloan.html">Loan Assist</a></li>
+
+                                    <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                    <li><a href="sellgold.html">Sell Gold</a></li>
+
+                                    <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                        <li><a href="products.html">Products <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="product.html">Buy 22k Gold coin</a>
+                                                    </li>
+                                                    <li><a href="gold-jewellery.html">22k Gold jewellery</a>
+                                                    </li>
+                                                </ul>
+                                            </li></li>
+
+
+                                    <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                                    <li><a href="contactus.html">contact Us</a></li>
+                                    <li><a href="location.html"> Locations</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget-item">
+                            <h6 class="widget-title">Follow Us</h6>
+                            <div class="widget-body social-link">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><img src="assets/img/x.svg" id="twitter-icon" width="18px" alt="brand logo">
+                                </a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="copyright-text text-left">
+                            <p> Powered by <a href="www.aparajayah.com" target="_blank"> Aparajayah Technologies</a></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="copyright-text text-end">
+                            <p>&copy; 2025 <b>Chinfingold</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- slick Slider JS -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="assets/js/countdown.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- jquery UI JS -->
+    <script src="assets/js/jqueryui.min.js"></script>
+    <!-- Image zoom JS -->
+    <script src="assets/js/image-zoom.min.js"></script>
+    <!-- Images loaded JS -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- mail-chimp active js -->
+    <script src="assets/js/ajaxchimp.js"></script>
+    <!-- contact form dynamic js -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="assets/js/google-map.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
